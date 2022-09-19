@@ -3,8 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/AndroidStudio/8/app/src/main/res/layout/activity_dashboard.xml" value="0.1796875" />
-        <entry key="..\:/AndroidStudio/8/app/src/main/res/layout/activity_main.xml" value="0.14130434782608695" />
+        <entry key="..\:/AndroidStudio/8/app/src/main/res/layout/activity_dashboard.xml" value="0.22" />
+        <entry key="..\:/AndroidStudio/8/app/src/main/res/layout/activity_detail_halaman_seminar.xml" value="0.1796875" />
+        <entry key="..\:/AndroidStudio/8/app/src/main/res/layout/activity_main.xml" value="0.16666666666666666" />
       </map>
     </option>
   </component>
