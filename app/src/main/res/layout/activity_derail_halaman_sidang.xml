@@ -11,11 +11,16 @@
         android:id="@+id/imageButton9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
         android:src="?attr/actionModeCloseDrawable"
         app:layout_constraintBottom_toTopOf="@+id/tv_main"
+        app:layout_constraintEnd_toStartOf="@+id/tv_main"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.533"
+        android:backgroundTint="@color/baground"/>
 
     <TextView
         android:id="@+id/tv_main"
@@ -23,17 +28,18 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppinssemibold"
         android:text="Detail Halaman Sidang"
-        app:layout_constraintBottom_toTopOf="@+id/button6"
         android:textColor="@color/black"
         android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/button6"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
-        android:layout_width="378dp"
-        android:layout_height="508dp"
+        android:layout_width="414dp"
+        android:layout_height="583dp"
         android:layout_marginBottom="20dp"
         app:cardBackgroundColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -117,7 +123,9 @@ Chaining Berbasis Web"
             android:layout_marginLeft="100dp"
             android:layout_marginTop="300dp"
             android:layout_weight="1"
-            android:text="Penetapan Penguji" />
+            android:text="Penetapan Penguji"
+            android:backgroundTint="@color/main"
+            android:textColor="@color/white"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -137,6 +145,8 @@ Chaining Berbasis Web"
         android:layout_marginEnd="16dp"
         android:layout_weight="1"
         android:text="Peserta Sidang"
+        android:backgroundTint="@color/main"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/cardView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_main" />
@@ -144,11 +154,14 @@ Chaining Berbasis Web"
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:layout_marginTop="450dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" >
+        app:layout_constraintStart_toStartOf="parent"
+        android:backgroundTint="@color/white">
+
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -157,35 +170,43 @@ Chaining Berbasis Web"
 
 
             <ImageButton
+                android:backgroundTint="@color/white"
                 android:id="@+id/imageButton5"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:src="@drawable/home" />
 
             <ImageButton
                 android:id="@+id/imageButton6"
+                android:backgroundTint="@color/white"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:src="@drawable/ta" />
 
             <ImageButton
                 android:id="@+id/imageButton7"
+                android:backgroundTint="@color/white"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:src="@drawable/sidang" />
 
             <ImageButton
                 android:id="@+id/imageButton8"
+                android:backgroundTint="@color/white"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:src="@drawable/group" />
+                android:src="@drawable/group"
+                />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
+
+
+</androidx.cardview.widget.CardView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -32,13 +32,14 @@
         app:layout_constraintVertical_bias="0.441" />
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        android:backgroundTint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" >
+        app:layout_constraintStart_toStartOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -49,29 +50,33 @@
             <ImageButton
                 android:id="@+id/imageButton5"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:backgroundTint="@color/white"
                 android:src="@drawable/home" />
 
             <ImageButton
                 android:id="@+id/imageButton6"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:backgroundTint="@color/white"
                 android:src="@drawable/ta" />
 
             <ImageButton
                 android:id="@+id/imageButton7"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:backgroundTint="@color/white"
                 android:src="@drawable/sidang" />
 
             <ImageButton
                 android:id="@+id/imageButton8"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:backgroundTint="@color/white"
                 android:src="@drawable/group" />
 
         </LinearLayout>
@@ -79,11 +84,12 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
-        android:layout_width="378dp"
-        android:layout_height="508dp"
+        android:layout_width="372dp"
+        android:layout_height="513dp"
         app:cardBackgroundColor="@color/white"
-        tools:layout_editor_absoluteX="17dp"
-        tools:layout_editor_absoluteY="179dp">
+        app:layout_constraintBottom_toTopOf="@+id/cardView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <TextView
             android:id="@+id/tv_detailhalseminar1"
@@ -160,7 +166,9 @@ Chaining Berbasis Web"
             android:layout_marginLeft="100dp"
             android:layout_marginTop="300dp"
             android:layout_weight="1"
-            android:text="Penetapan Penguji" />
+            android:backgroundTint="@color/main"
+            android:text="Penetapan Penguji"
+            android:textColor="@color/white" />
 
 
     </androidx.cardview.widget.CardView>
@@ -171,8 +179,11 @@ Chaining Berbasis Web"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="List Peserta Seminar"
+        android:backgroundTint="@color/main"
+        android:textColor="@color/white"
+        android:layout_marginRight="20dp"
         app:layout_constraintBottom_toTopOf="@+id/cardView"
-        app:layout_constraintTop_toBottomOf="@+id/tv_main"
-        tools:layout_editor_absoluteX="217dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_main" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
