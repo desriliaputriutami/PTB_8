@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.a8">
+    package="com.example.a8" >
 
     <application
         android:allowBackup="true"
@@ -12,7 +12,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.8"
-        tools:targetApi="31">
+        tools:targetApi="31" >
+        <activity
+            android:name=".detail_TA_Activity2"
+            android:exported="false" />
+        <activity
+            android:name=".form_pembimbing_TA_status_hasil_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".form_pembimbing_TA_Activity"
+            android:exported="false" />
         <activity
             android:name=".form_penetapan_pengujian_seminar_Activity"
             android:exported="false" />
@@ -31,7 +40,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:theme="@style/FullScreen">
+            android:theme="@style/FullScreen" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW" />

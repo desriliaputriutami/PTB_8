@@ -3,15 +3,23 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/AndroidStudio/8/app/src/main/res/layout/activity_dashboard.xml" value="0.1796875" />
-        <entry key="..\:/AndroidStudio/8/app/src/main/res/layout/activity_main.xml" value="0.14130434782608695" />
-        <entry key="..\:/Users/S410U/AndroidStudioProjects/PTB_8/app/src/main/res/layout/activity_dashboard.xml" value="0.1" />
-        <entry key="..\:/Users/S410U/AndroidStudioProjects/PTB_8/app/src/main/res/layout/activity_form_penetapan_penguji.xml" value="0.22" />
-        <entry key="..\:/Users/S410U/AndroidStudioProjects/PTB_8/app/src/main/res/layout/activity_form_penetapan_penguji_seminar_status_hasil.xml" value="0.22" />
-        <entry key="..\:/Users/S410U/AndroidStudioProjects/PTB_8/app/src/main/res/layout/activity_form_penetapan_penguji_ta_status_hasil.xml" value="0.22" />
-        <entry key="..\:/Users/S410U/AndroidStudioProjects/PTB_8/app/src/main/res/layout/activity_form_penetapan_pengujian_seminar.xml" value="0.2" />
-        <entry key="..\:/Users/S410U/AndroidStudioProjects/PTB_8/app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="..\:/Users/USER/Documents/GitHub/PTB_8/app/src/main/res/layout/activity_form_penetapan_penguji.xml" value="0.16077898550724637" />
+        <entry key="..\:/AndroidStudio/8/app/src/main/res/layout/activity_dashboard.xml" value="0.16666666666666666" />
+        <entry key="..\:/AndroidStudio/8/app/src/main/res/layout/activity_derail_halaman_sidang.xml" value="0.22" />
+        <entry key="..\:/AndroidStudio/8/app/src/main/res/layout/activity_detail_halaman_seminar.xml" value="0.16666666666666666" />
+        <entry key="..\:/AndroidStudio/8/app/src/main/res/layout/activity_main.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/S410U/AndroidStudioProjects/PTB_8/app/src/main/res/drawable/arrow.xml" value="0.1785" />
+        <entry key="..\:/Users/S410U/AndroidStudioProjects/PTB_8/app/src/main/res/layout-sw600dp/activity_detail_ta2.xml" value="0.15" />
+        <entry key="..\:/Users/S410U/AndroidStudioProjects/PTB_8/app/src/main/res/layout/activity_dashboard.xml" value="0.2" />
+        <entry key="..\:/Users/S410U/AndroidStudioProjects/PTB_8/app/src/main/res/layout/activity_derail_halaman_sidang.xml" value="0.2" />
+        <entry key="..\:/Users/S410U/AndroidStudioProjects/PTB_8/app/src/main/res/layout/activity_detail_halaman_seminar.xml" value="0.2" />
+        <entry key="..\:/Users/S410U/AndroidStudioProjects/PTB_8/app/src/main/res/layout/activity_detail_ta2.xml" value="0.22" />
+        <entry key="..\:/Users/S410U/AndroidStudioProjects/PTB_8/app/src/main/res/layout/activity_form_pembimbing_ta.xml" value="0.12" />
+        <entry key="..\:/Users/S410U/AndroidStudioProjects/PTB_8/app/src/main/res/layout/activity_form_pembimbing_ta_status_hasil.xml" value="0.2" />
+        <entry key="..\:/Users/S410U/AndroidStudioProjects/PTB_8/app/src/main/res/layout/activity_form_penetapan_penguji.xml" value="0.14666666666666667" />
+        <entry key="..\:/Users/S410U/AndroidStudioProjects/PTB_8/app/src/main/res/layout/activity_form_penetapan_penguji_seminar_status_hasil.xml" value="0.14666666666666667" />
+        <entry key="..\:/Users/S410U/AndroidStudioProjects/PTB_8/app/src/main/res/layout/activity_form_penetapan_penguji_ta_status_hasil.xml" value="0.2" />
+        <entry key="..\:/Users/S410U/AndroidStudioProjects/PTB_8/app/src/main/res/layout/activity_form_penetapan_pengujian_seminar.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/S410U/AndroidStudioProjects/PTB_8/app/src/main/res/layout/form_pembimbing_TA_status_hasil.xml" value="0.2" />
       </map>
     </option>
   </component>
