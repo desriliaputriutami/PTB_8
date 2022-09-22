@@ -11,11 +11,15 @@
         android:id="@+id/imageButton9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/baground"
         android:src="?attr/actionModeCloseDrawable"
         app:layout_constraintBottom_toTopOf="@+id/tv_main"
+        app:layout_constraintEnd_toStartOf="@+id/tv_main"
+        app:layout_constraintHorizontal_bias="0.225"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        android:layout_marginTop="15dp"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/tv_main"
@@ -23,13 +27,12 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppinssemibold"
         android:text="Detail Halaman Seminar"
+        android:layout_marginTop="20dp"
         android:textColor="@color/black"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/cardView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.441" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView2"
@@ -84,12 +87,13 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
-        android:layout_width="372dp"
-        android:layout_height="513dp"
+        android:layout_width="401dp"
+        android:layout_height="637dp"
         app:cardBackgroundColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/cardView2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button6">
 
         <TextView
             android:id="@+id/tv_detailhalseminar1"
@@ -177,12 +181,11 @@ Chaining Berbasis Web"
         android:id="@+id/button6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="List Peserta Seminar"
-        android:backgroundTint="@color/main"
-        android:textColor="@color/white"
         android:layout_marginRight="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        android:layout_weight="1"
+        android:backgroundTint="@color/main"
+        android:text="List Peserta Seminar"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_main" />
 
