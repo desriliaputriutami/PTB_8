@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".detail_TA_Activity2">
@@ -11,65 +10,51 @@
       android:id="@+id/buttonClose4"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginTop="28dp"
-      android:layout_marginEnd="304dp"
+      android:layout_marginStart="10dp"
+      android:layout_marginTop="10dp"
+      android:layout_marginEnd="280dp"
+      android:layout_marginBottom="650dp"
       android:backgroundTint="@color/white"
       android:text="Back"
       android:textColor="@color/black"
+      app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent" />
 
   <TextView
       android:id="@+id/textView2"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginStart="175dp"
-      android:layout_marginTop="79dp"
-      android:layout_marginEnd="175dp"
-      android:layout_marginBottom="633dp"
       android:backgroundTint="#000000"
       android:fontFamily="@font/poppinssemibold"
       android:text="Detail TA"
       android:textColor="@color/black"
       android:textSize="20sp"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent"
-      app:layout_constraintVertical_bias="1.0" />
+      tools:layout_editor_absoluteX="160dp"
+      tools:layout_editor_absoluteY="64dp" />
 
   <TextView
       android:id="@+id/nama"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginStart="8dp"
-      android:layout_marginTop="56dp"
-      android:layout_marginEnd="185dp"
       android:fontFamily="@font/poppinssemibold"
       android:text="Adi Satria"
       android:textColor="@color/black"
       android:textSize="16sp"
-      app:layout_constraintBottom_toTopOf="@+id/nim"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toEndOf="@+id/imageView2"
-      app:layout_constraintTop_toBottomOf="@+id/textView2" />
+      tools:layout_editor_absoluteX="147dp"
+      tools:layout_editor_absoluteY="154dp" />
 
   <TextView
       android:id="@+id/nim"
       android:layout_width="wrap_content"
-      android:layout_height="0dp"
-      android:layout_marginStart="1dp"
-      android:layout_marginEnd="180dp"
-      android:layout_marginBottom="58dp"
+      android:layout_height="39dp"
       android:fontFamily="@font/poppinsregular"
       android:text="2011521049"
       android:textColor="@color/black"
       android:textSize="16sp"
-      app:layout_constraintBottom_toTopOf="@+id/info"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.875"
-      app:layout_constraintStart_toEndOf="@+id/imageView2"
-      app:layout_constraintTop_toBottomOf="@+id/nama" />
+      tools:layout_editor_absoluteX="147dp"
+      tools:layout_editor_absoluteY="181dp" />
 
   <TextView
       android:id="@+id/info"
@@ -79,12 +64,8 @@
       android:text="Judul Tugas Akhir :"
       android:textColor="@color/black"
       android:textSize="14sp"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.15"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent"
-      app:layout_constraintVertical_bias="0.396" />
+      tools:layout_editor_absoluteX="35dp"
+      tools:layout_editor_absoluteY="278dp" />
 
   <TextView
       android:id="@+id/info3"
@@ -94,12 +75,8 @@
       android:text="Sistem Pengaturan Pencahayaan Ruangan Berbasis Pada Rumah Pintar"
       android:textColor="@color/black"
       android:textSize="14sp"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.916"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent"
-      app:layout_constraintVertical_bias="0.414" />
+      tools:layout_editor_absoluteX="176dp"
+      tools:layout_editor_absoluteY="278dp" />
 
   <TextView
       android:id="@+id/info4"
@@ -109,12 +86,8 @@
       android:text="Syafril Adi, S.Kom."
       android:textColor="@color/black"
       android:textSize="14sp"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.975"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent"
-      app:layout_constraintVertical_bias="0.504" />
+      tools:layout_editor_absoluteX="198dp"
+      tools:layout_editor_absoluteY="351dp" />
 
   <TextView
       android:id="@+id/info5"
@@ -124,12 +97,8 @@
       android:text="Fitra Ade"
       android:textColor="@color/black"
       android:textSize="14sp"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.497"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent"
-      app:layout_constraintVertical_bias="0.579" />
+      tools:layout_editor_absoluteX="101dp"
+      tools:layout_editor_absoluteY="403dp" />
 
   <TextView
       android:id="@+id/info6"
@@ -139,12 +108,8 @@
       android:text="Ruang Seminar"
       android:textColor="@color/black"
       android:textSize="14sp"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.497"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent"
-      app:layout_constraintVertical_bias="0.647" />
+      tools:layout_editor_absoluteX="101dp"
+      tools:layout_editor_absoluteY="451dp" />
 
   <TextView
       android:id="@+id/dosen_pembimbing"
@@ -154,12 +119,8 @@
       android:text="Dosen Pembimbing :"
       android:textColor="@color/black"
       android:textSize="14sp"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.15"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent"
-      app:layout_constraintVertical_bias="0.499" />
+      tools:layout_editor_absoluteX="35dp"
+      tools:layout_editor_absoluteY="351dp" />
 
   <TextView
       android:id="@+id/penguji"
@@ -169,12 +130,8 @@
       android:text="Penguji :"
       android:textColor="@color/black"
       android:textSize="14sp"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.15"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent"
-      app:layout_constraintVertical_bias="0.573" />
+      tools:layout_editor_absoluteX="35dp"
+      tools:layout_editor_absoluteY="403dp" />
 
   <TextView
       android:id="@+id/lokasi"
@@ -184,12 +141,8 @@
       android:text="Lokasi   :"
       android:textColor="@color/black"
       android:textSize="14sp"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.15"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent"
-      app:layout_constraintVertical_bias="0.641" />
+      tools:layout_editor_absoluteX="35dp"
+      tools:layout_editor_absoluteY="451dp" />
 
   <TextView
       android:id="@+id/lokasi2"
@@ -199,12 +152,8 @@
       android:text="Jumat, 12 Desember 2021"
       android:textColor="@color/black"
       android:textSize="14sp"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.433"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent"
-      app:layout_constraintVertical_bias="0.712" />
+      tools:layout_editor_absoluteX="101dp"
+      tools:layout_editor_absoluteY="501dp" />
 
   <TextView
       android:id="@+id/Jadwal"
@@ -214,59 +163,48 @@
       android:text="Jadwal :"
       android:textColor="@color/black"
       android:textSize="14sp"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.15"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent"
-      app:layout_constraintVertical_bias="0.712" />
+      tools:layout_editor_absoluteX="35dp"
+      tools:layout_editor_absoluteY="501dp" />
 
   <ImageView
       android:id="@+id/imageView2"
       android:layout_width="91dp"
       android:layout_height="113dp"
-      android:layout_marginStart="5dp"
-      android:layout_marginTop="120dp"
-      android:layout_marginEnd="12dp"
-      android:layout_marginBottom="31dp"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.142"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent"
-      app:layout_constraintVertical_bias="0.0"
-      app:srcCompat="@drawable/profile" />
+      app:srcCompat="@drawable/profile"
+      tools:layout_editor_absoluteX="48dp"
+      tools:layout_editor_absoluteY="120dp" />
+
 
   <Button
       android:id="@+id/buttonListPesertaSeminar"
-      android:layout_width="0dp"
-      android:layout_height="43dp"
-      android:layout_marginStart="43dp"
-      android:layout_marginTop="400dp"
-      android:layout_marginEnd="41dp"
+      android:layout_width="327dp"
+      android:layout_height="wrap_content"
+
+      android:layout_marginStart="42dp"
+      android:layout_marginTop="420dp"
+      android:layout_marginEnd="42dp"
+      android:layout_marginBottom="33dp"
       android:backgroundTint="@color/main"
       android:text="List Peserta Seminar"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.0"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent" />
-
 
   <Button
       android:id="@+id/buttonListLogbook"
       android:layout_width="327dp"
       android:layout_height="43dp"
+
       android:layout_marginStart="43dp"
-      android:layout_marginTop="500dp"
-      android:layout_marginEnd="41dp"
+      android:layout_marginTop="10dp"
+      android:layout_marginEnd="42dp"
+      android:layout_marginBottom="51dp"
       android:backgroundTint="@color/main"
       android:text="List Logbook"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
-
-      app:layout_constraintHorizontal_bias="0.0"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent" />
+      app:layout_constraintTop_toBottomOf="@+id/buttonListPesertaSeminar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
