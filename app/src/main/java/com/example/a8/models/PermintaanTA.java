@@ -1,6 +1,6 @@
 package com.example.a8.models;
 
-public class Mahasiswa {
+public class PermintaanTA {
 
     String gambar;
     int tipeMhs;
@@ -9,8 +9,8 @@ public class Mahasiswa {
     String tempat;
     int status;
 
-    public Mahasiswa(){ }
-    public Mahasiswa(String gambar, int tipeMhs, String namaMhs, String waktu, String tempat, int status) {
+    public PermintaanTA(){ }
+    public PermintaanTA(String gambar, int tipeMhs, String namaMhs, String waktu, String tempat, int status) {
         this.gambar = gambar;
         this.tipeMhs = tipeMhs;
         this.namaMhs = namaMhs;
