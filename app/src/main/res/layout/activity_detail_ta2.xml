@@ -7,7 +7,7 @@
     tools:context=".detail_TA_Activity2">
 
   <Button
-      android:id="@+id/buttonClose4"
+      android:id="@+id/buttonBack"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_marginStart="5dp"
@@ -16,6 +16,7 @@
       android:layout_marginBottom="530dp"
       android:backgroundTint="@color/white"
       android:text="Back"
+      android:textSize="13sp"
       android:textColor="@color/black"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"

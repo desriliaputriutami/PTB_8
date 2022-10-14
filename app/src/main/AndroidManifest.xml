@@ -17,24 +17,6 @@
             android:name=".detail_TA_Activity2"
             android:exported="false" />
         <activity
-            android:name=".form_pembimbing_TA_status_hasil_Activity"
-            android:exported="false" />
-        <activity
-            android:name=".form_pembimbing_TA_Activity"
-            android:exported="false" />
-        <activity
-            android:name=".form_penetapan_pengujian_seminar_Activity"
-            android:exported="false" />
-        <activity
-            android:name=".form_penetapan_penguji_seminar_status_hasilActivity"
-            android:exported="false" />
-        <activity
-            android:name=".form_penetapan_penguji_TA_status_hasil_Activity"
-            android:exported="false" />
-        <activity
-            android:name=".form_penetapan_penguji_activity"
-            android:exported="false" />
-        <activity
             android:name=".MainActivity"
             android:exported="true"
             android:theme="@style/FullScreen" >
