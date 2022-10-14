@@ -56,7 +56,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:backgroundTint="@color/white"
-                android:src="@drawable/home" />
+                android:src="@drawable/ic_dashboard" />
 
             <ImageButton
                 android:id="@+id/imageButton6"
@@ -64,7 +64,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:backgroundTint="@color/white"
-                android:src="@drawable/ta" />
+                android:src="@drawable/ic_book" />
 
             <ImageButton
                 android:id="@+id/imageButton7"
@@ -72,7 +72,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:backgroundTint="@color/white"
-                android:src="@drawable/sidang" />
+                android:src="@drawable/ic_desktop" />
 
             <ImageButton
                 android:id="@+id/imageButton8"
@@ -80,7 +80,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:backgroundTint="@color/white"
-                android:src="@drawable/group" />
+                android:src="@drawable/ic_mhs" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
