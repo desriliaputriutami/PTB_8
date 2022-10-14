@@ -37,20 +37,116 @@ public class ListPermintaanTA extends AppCompatActivity implements PermintaanTAA
         ArrayList<PermintaanTA> listPermintaanTA = new ArrayList<>();
         listPermintaanTA.add(new PermintaanTA(
                 null,
-                1,
-                "Kuliah Pemrograman Teknologi Bergerak",
+                1611521001,
+                "Mardana Dulas",
                 "12.00-15.00",
                 "H2.4",
                 1
         ));
         listPermintaanTA.add(new PermintaanTA(
                 null,
-                1,
-                "Kuliah Inovasi Sistem Informasi",
+                1611523026,
+                "Divo Pratama",
                 "12.00-15.00",
                 "H2.4",
                 1
         ));
+        listPermintaanTA.add(new PermintaanTA(
+                null,
+                1611521001,
+                "Mardana Dulas",
+                "12.00-15.00",
+                "H2.4",
+                1
+        ));
+        listPermintaanTA.add(new PermintaanTA(
+                null,
+                1611523026,
+                "Divo Pratama",
+                "12.00-15.00",
+                "H2.4",
+                1
+        ));
+        listPermintaanTA.add(new PermintaanTA(
+                null,
+                1611521001,
+                "Mardana Dulas",
+                "12.00-15.00",
+                "H2.4",
+                1
+        ));
+        listPermintaanTA.add(new PermintaanTA(
+                null,
+                1611523026,
+                "Divo Pratama",
+                "12.00-15.00",
+                "H2.4",
+                1
+        ));
+        listPermintaanTA.add(new PermintaanTA(
+                null,
+                1611521001,
+                "Mardana Dulas",
+                "12.00-15.00",
+                "H2.4",
+                1
+        ));
+        listPermintaanTA.add(new PermintaanTA(
+                null,
+                1611523026,
+                "Divo Pratama",
+                "12.00-15.00",
+                "H2.4",
+                1
+        ));
+        listPermintaanTA.add(new PermintaanTA(
+                null,
+                1611521001,
+                "Mardana Dulas",
+                "12.00-15.00",
+                "H2.4",
+                1
+        ));
+        listPermintaanTA.add(new PermintaanTA(
+                null,
+                1611523026,
+                "Divo Pratama",
+                "12.00-15.00",
+                "H2.4",
+                1
+        ));
+        listPermintaanTA.add(new PermintaanTA(
+                null,
+                1611521001,
+                "Mardana Dulas",
+                "12.00-15.00",
+                "H2.4",
+                1
+        ));
+        listPermintaanTA.add(new PermintaanTA(
+                null,
+                1611523026,
+                "Divo Pratama",
+                "12.00-15.00",
+                "H2.4",
+                1
+        ));listPermintaanTA.add(new PermintaanTA(
+                null,
+                1611521001,
+                "Mardana Dulas",
+                "12.00-15.00",
+                "H2.4",
+                1
+        ));
+        listPermintaanTA.add(new PermintaanTA(
+                null,
+                1611523026,
+                "Divo Pratama",
+                "12.00-15.00",
+                "H2.4",
+                1
+        ));
+
         return listPermintaanTA;
     }
 
