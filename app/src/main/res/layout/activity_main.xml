@@ -8,28 +8,11 @@
     tools:context=".MainActivity">
 
 
-    <Button
-        android:id="@+id/cuss_ke_detail_TA"
-        android:layout_width="276dp"
-        android:layout_height="56dp"
-        android:layout_marginTop="550dp"
-        android:fontFamily="@font/poppinssemibold"
-        android:text="cuss ke detail TA dulu"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.992" />
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/list_mahasiswa"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="160dp"
-        app:layout_constraintBottom_toBottomOf="@+id/cuss_ke_detail_TA"
+        android:layout_width="409dp"
+        android:layout_height="685dp"
+        android:layout_marginTop="208dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

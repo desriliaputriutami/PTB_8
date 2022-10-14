@@ -1,28 +1,35 @@
 package com.example.a8;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.a8.adapters.DataAdapter;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
+
+    private RecyclerView rvData;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        
-        Button button1 = findViewById(R.id.cuss_ke_detail_TA);
 
-        button1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, detail_TA_Activity2.class));
+        rvData = findViewById(R.id.rv_data);
 
-            }
-        });
+        DataAdapter adapter = new DataAdapter(new ArrayList<>());
+        LinearLayoutManager LayoutManager = new LinearLayoutManager(this);
+
+        rvData.setLayoutManager(LayoutManager);
+        rvData.setLayoutManager(adapter);
+
+
+
+
 
     }
 }
