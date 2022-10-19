@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 public class PermintaanTADetailActivity extends AppCompatActivity {
@@ -18,8 +19,13 @@ public class PermintaanTADetailActivity extends AppCompatActivity {
         Intent detailIntent = getIntent();
         if(detailIntent!=null){
             namaMhs=detailIntent.getStringExtra("NAMA_MHS");
-            textNamaMhsDetail = findViewById(R.id.textNamaMhs);
+            textNamaMhsDetail = findViewById(R.id.textRujukan);
             textNamaMhsDetail.setText(namaMhs);
         }
+    }
+
+    public void onButtonKirimClick(View view) {
+        Intent i = new Intent(this, ConfirmActivity.class);
+        startActivity(i);
     }
 }
