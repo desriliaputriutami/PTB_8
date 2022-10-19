@@ -12,7 +12,7 @@ import com.example.a8.models.PermintaanTA;
 
 import java.util.ArrayList;
 
-public class ListPermintaanSeminar extends AppCompatActivity implements PermintaanTAAdapter.ItemPermintaanTAClickListener{
+public class ListMahasiswaTA extends AppCompatActivity implements PermintaanTAAdapter.ItemPermintaanTAClickListener{
 
     private RecyclerView rvMhs;
 

@@ -41,7 +41,7 @@ public class Dashboard extends AppCompatActivity {
         imageButton7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(Dashboard.this,ListPermintaanSeminar.class);
+                Intent i = new Intent(Dashboard.this,ListPermintaanTA.class);
                 startActivity(i);
             }
         });

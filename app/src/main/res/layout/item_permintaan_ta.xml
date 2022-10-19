@@ -38,7 +38,7 @@
             app:layout_constraintTop_toTopOf="@+id/imageMhs" />
 
         <TextView
-            android:id="@+id/textNamaMhs"
+            android:id="@+id/textRujukan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -80,8 +80,8 @@
             android:text="12.00 - 15.00"
             android:textSize="12sp"
             android:textStyle="italic"
-            app:layout_constraintStart_toStartOf="@+id/textNamaMhs"
-            app:layout_constraintTop_toBottomOf="@+id/textNamaMhs" />
+            app:layout_constraintStart_toStartOf="@+id/textRujukan"
+            app:layout_constraintTop_toBottomOf="@+id/textRujukan" />
 
         <ImageView
             android:id="@+id/imageStatus"

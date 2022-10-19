@@ -71,7 +71,7 @@ public class PermintaanTAAdapter extends RecyclerView.Adapter<PermintaanTAAdapte
             imageMhs = itemView.findViewById(R.id.imageMhs);
             imageStatus =itemView.findViewById(R.id.imageStatus);
             textMhsType =itemView.findViewById(R.id.textMhsType);
-            textNamaMhs =itemView.findViewById(R.id.textNamaMhs);
+            textNamaMhs =itemView.findViewById(R.id.textRujukan);
             textWaktu =itemView.findViewById(R.id.textWaktu);
             textTempat =itemView.findViewById(R.id.textTempat);
 
