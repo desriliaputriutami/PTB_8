@@ -29,30 +29,32 @@
         android:textColor="#000000"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButton2"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton3"
-        app:layout_constraintStart_toEndOf="@+id/imageButton2" />
+        app:layout_constraintBottom_toBottomOf="@+id/imageButtonBack"
+        app:layout_constraintEnd_toStartOf="@+id/imageButtonLogout2"
+        app:layout_constraintStart_toEndOf="@+id/imageButtonBack" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/imageButtonBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:backgroundTint="@color/baground"
-        android:tint="@color/black"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButton3"
+        android:onClick="backClick"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_baseline_menu_24" />
+        app:srcCompat="@drawable/ic_back"
+        app:tint="@color/black" />
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/imageButtonLogout2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:backgroundTint="@color/baground"
+        android:onClick="logoutClick"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButtonBack"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_exit" />
