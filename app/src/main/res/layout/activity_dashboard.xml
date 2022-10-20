@@ -144,6 +144,7 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
             </androidx.cardview.widget.CardView>
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.cardview.widget.CardView
@@ -155,43 +156,47 @@
             app:cardCornerRadius="25dp"
             app:layout_constraintBottom_toBottomOf="parent">
 
-            <TextView
-                android:id="@+id/tv_jadwalseminar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:fontFamily="@font/poppinssemibold"
-                android:text="Jadwal Seminar Minggu Ini"
-                android:textColor="@color/main" />
-
-            <LinearLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/textView5"
-                    android:layout_width="140dp"
+                    android:id="@+id/tv_jadwalseminar"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="50dp"
-                    android:layout_weight="1"
-                    android:fontFamily="@font/poppinsmedium"
-                    android:text="Selasa, 20 Sept"
-                    android:textColor="#0E0E0E" />
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="Minggu Ini"
+                    android:textColor="#121111"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                <Button
-                    android:id="@+id/button2"
-                    android:layout_width="250dp"
+                <TextView
+                    android:id="@+id/textViewJadwalSeminar"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="40dp"
-                    android:layout_weight="1"
-                    android:backgroundTint="@color/main"
-                    android:text="MARDANA DULAS_1611521001"
-                    android:textColor="@color/white" />
-            </LinearLayout>
+                    android:fontFamily="@font/poppinssemibold"
+                    android:text="Jadwal Seminar"
+                    android:textColor="@color/main"
+                    android:textSize="22sp"
+                    app:layout_constraintStart_toStartOf="@+id/tv_jadwalseminar"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_jadwalseminar" />
+
+                <TextView
+                    android:id="@+id/textViewJmlSeminar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="2"
+                    android:textColor="#131212"
+                    android:textSize="26sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
 
         </androidx.cardview.widget.CardView>
@@ -214,37 +219,38 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:fontFamily="@font/poppinssemibold"
-                    android:text="Jadwal Sidang Minggu Ini"
-                    android:textColor="@color/main"
-                    app:layout_constraintStart_toStartOf="@+id/textView"
+                    android:fontFamily="@font/poppinsregular"
+                    android:text="Minggu Ini"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@+id/textViewJadwalSidang"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/textView"
-                    android:layout_width="76dp"
-                    android:layout_height="37dp"
+                    android:id="@+id/textViewJadwalSidang"
+                    android:layout_width="169dp"
+                    android:layout_height="34dp"
                     android:layout_marginStart="20dp"
-                    android:layout_marginEnd="16dp"
-                    android:fontFamily="@font/poppinsmedium"
-                    android:text="Rabu, 21 Sept 2022"
-                    android:textColor="@color/black"
-                    app:layout_constraintEnd_toStartOf="@+id/btn_sidag"
+                    android:layout_marginTop="1dp"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:text="Jadwal Sidang"
+                    android:textColor="@color/main"
+                    android:textSize="22sp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/btn_sidag" />
+                    app:layout_constraintTop_toBottomOf="@+id/tv_jadwalsidang" />
 
-                <Button
-                    android:id="@+id/btn_sidag"
+                <TextView
+                    android:id="@+id/textViewJmlSidang"
                     android:layout_width="wrap_content"
-                    android:layout_height="37dp"
-                    android:layout_marginTop="32dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_weight="1"
-                    android:backgroundTint="@color/main"
-                    android:text="Divo Pratama_1611523026"
-                    android:textColor="@color/white"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/poppinsmedium"
+                    android:text="3"
+                    android:textColor="@color/black"
+                    android:textSize="26sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
