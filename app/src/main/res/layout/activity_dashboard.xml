@@ -45,7 +45,7 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cd_white"
-        android:layout_width="415dp"
+        android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="8dp"
         android:backgroundTint="@color/baground"
@@ -61,12 +61,129 @@
             android:layout_height="match_parent">
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewJadwalSidang"
+                android:layout_width="352dp"
+                android:layout_height="121dp"
+                android:layout_marginTop="32dp"
+                android:backgroundTint="@color/cardview_light_background"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="5dp"
+                app:layout_constraintEnd_toEndOf="@+id/cardViewJadwalSeminar"
+                app:layout_constraintStart_toStartOf="@+id/cardViewJadwalSeminar"
+                app:layout_constraintTop_toBottomOf="@+id/cardViewJadwalSeminar">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tv_jadwalsidang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text="Minggu Ini"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="@+id/textViewJadwalSidang"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textViewJadwalSidang"
+                        android:layout_width="169dp"
+                        android:layout_height="34dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="1dp"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:text="Jadwal Sidang"
+                        android:textColor="@color/black"
+                        android:textSize="22sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_jadwalsidang" />
+
+                    <TextView
+                        android:id="@+id/textViewJmlSidang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="8dp"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:text="3"
+                        android:textColor="@color/black"
+                        android:textSize="26sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewJadwalSeminar"
+                android:layout_width="352dp"
+                android:layout_height="121dp"
+                android:layout_marginTop="32dp"
+                android:backgroundTint="@color/cardview_light_background"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="5dp"
+                app:layout_constraintEnd_toEndOf="@+id/cardView2"
+                app:layout_constraintStart_toStartOf="@+id/cardView3"
+                app:layout_constraintTop_toBottomOf="@+id/cardView3">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tv_jadwalseminar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/poppinsregular"
+                        android:text="Minggu Ini"
+                        android:textColor="#121111"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textViewJadwalSeminar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:text="Jadwal Seminar"
+                        android:textColor="@color/black"
+                        android:textSize="22sp"
+                        app:layout_constraintStart_toStartOf="@+id/tv_jadwalseminar"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_jadwalseminar" />
+
+                    <TextView
+                        android:id="@+id/textViewJmlSeminar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="8dp"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:text="2"
+                        android:textColor="#131212"
+                        android:textSize="26sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView2"
                 android:layout_width="167dp"
                 android:layout_height="92dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="32dp"
                 app:cardCornerRadius="20dp"
-                app:cardElevation="10dp"
+                app:cardElevation="5dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
@@ -76,13 +193,13 @@
 
                     <TextView
                         android:id="@+id/tv_dashPermintaanSeminar"
-                        android:layout_width="wrap_content"
+                        android:layout_width="112dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="60dp"
-                        android:fontFamily="@font/poppinssemibold"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/poppinsmedium"
                         android:text="Permintaan Seminar"
-                        android:textColor="@color/main"
-                        app:layout_constraintEnd_toEndOf="parent"
+                        android:textColor="@color/black"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -90,26 +207,25 @@
                         android:id="@+id/textView4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="16dp"
                         android:fontFamily="@font/poppinssemibold"
                         android:text="28"
-                        android:textColor="@color/main"
-                        android:textSize="34sp"
-                        app:layout_constraintBottom_toTopOf="@+id/tv_dashPermintaanSeminar"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cardView3"
                 android:layout_width="167dp"
                 android:layout_height="92dp"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="20dp"
                 app:cardCornerRadius="20dp"
-                app:cardElevation="10dp"
+                app:cardElevation="5dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
@@ -121,24 +237,24 @@
                         android:id="@+id/tv_jml1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
                         android:fontFamily="@font/poppinssemibold"
                         android:text="40"
-                        android:textColor="@color/main"
-                        android:textSize="34sp"
-                        app:layout_constraintBottom_toTopOf="@+id/textView3"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
 
                     <TextView
                         android:id="@+id/textView3"
-                        android:layout_width="wrap_content"
+                        android:layout_width="112dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="60dp"
-                        android:fontFamily="@font/poppinssemibold"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/poppinsmedium"
                         android:text="Permintaan Sidang"
-                        android:textColor="@color/main"
-                        app:layout_constraintEnd_toEndOf="parent"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -146,116 +262,6 @@
             </androidx.cardview.widget.CardView>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="352dp"
-            android:layout_height="121dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="140dp"
-            android:backgroundTint="@color/cardview_light_background"
-            app:cardCornerRadius="25dp"
-            app:layout_constraintBottom_toBottomOf="parent">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:id="@+id/tv_jadwalseminar"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="@font/poppinsregular"
-                    android:text="Minggu Ini"
-                    android:textColor="#121111"
-                    android:textSize="14sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/textViewJadwalSeminar"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppinssemibold"
-                    android:text="Jadwal Seminar"
-                    android:textColor="@color/main"
-                    android:textSize="22sp"
-                    app:layout_constraintStart_toStartOf="@+id/tv_jadwalseminar"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_jadwalseminar" />
-
-                <TextView
-                    android:id="@+id/textViewJmlSeminar"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginBottom="8dp"
-                    android:fontFamily="@font/poppinsmedium"
-                    android:text="2"
-                    android:textColor="#131212"
-                    android:textSize="26sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="352dp"
-            android:layout_height="121dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="280dp"
-            android:backgroundTint="@color/cardview_light_background"
-            app:cardCornerRadius="25dp"
-            app:layout_constraintBottom_toBottomOf="parent">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:id="@+id/tv_jadwalsidang"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="@font/poppinsregular"
-                    android:text="Minggu Ini"
-                    android:textColor="@color/black"
-                    android:textSize="14sp"
-                    app:layout_constraintStart_toStartOf="@+id/textViewJadwalSidang"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/textViewJadwalSidang"
-                    android:layout_width="169dp"
-                    android:layout_height="34dp"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="1dp"
-                    android:fontFamily="@font/poppinssemibold"
-                    android:text="Jadwal Sidang"
-                    android:textColor="@color/main"
-                    android:textSize="22sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_jadwalsidang" />
-
-                <TextView
-                    android:id="@+id/textViewJmlSidang"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginBottom="8dp"
-                    android:fontFamily="@font/poppinsmedium"
-                    android:text="3"
-                    android:textColor="@color/black"
-                    android:textSize="26sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-        </androidx.cardview.widget.CardView>
 
 
     </androidx.cardview.widget.CardView>
