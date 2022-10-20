@@ -199,7 +199,7 @@
       android:layout_width="66dp"
       android:layout_height="61dp"
       android:layout_marginStart="8dp"
-      android:layout_marginTop="20dp"
+      android:layout_marginTop="70dp"
       android:layout_marginEnd="200dp"
       android:layout_marginBottom="40dp"
       app:layout_constraintBottom_toTopOf="@+id/judul_tugas_akhir"
@@ -214,7 +214,7 @@
       android:layout_width="327dp"
       android:layout_height="wrap_content"
 
-      android:layout_marginTop="200dp"
+      android:layout_marginTop="140dp"
       android:layout_marginBottom="5dp"
       android:backgroundTint="@color/main"
       android:text="List Peserta Seminar"
