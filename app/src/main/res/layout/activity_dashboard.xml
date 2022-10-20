@@ -4,84 +4,56 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/rectangle"
-    tools:context=".MainActivity">
+    android:background="@drawable/two"
+    tools:context=".Login">
 
     <ImageView
         android:id="@+id/img_foto"
-        android:layout_width="156dp"
-        android:layout_height="126dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="214dp"
+        android:layout_height="194dp"
+        android:layout_marginTop="80dp"
         android:src="@drawable/foto"
-        app:layout_constraintEnd_toStartOf="@+id/imageView3"
+        app:layout_constraintBottom_toTopOf="@+id/tv_nama"
+        app:layout_constraintEnd_toStartOf="@+id/imageButtonLogout"
         app:layout_constraintStart_toEndOf="@+id/imageButton"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cd_nav"
+    <TextView
+        android:id="@+id/tv_nama"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:backgroundTint="@color/white"
-        android:scrollbarAlwaysDrawVerticalTrack="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:cardBackgroundColor="@color/black">
+        android:layout_height="35dp"
+        android:fontFamily="@font/poppinssemibold"
+        android:text="Husnil Kamil,M.T"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@+id/img_foto"
+        tools:layout_editor_absoluteX="80dp" />
 
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-
-            <ImageButton
-                android:id="@+id/imageButton5"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-
-                android:layout_weight="1"
-                android:backgroundTint="@color/white"
-                android:src="@drawable/ic_dashboard" />
-
-            <ImageButton
-                android:id="@+id/imageButton6"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:backgroundTint="@color/white"
-                android:src="@drawable/ic_book" />
-
-            <ImageButton
-                android:id="@+id/imageButton7"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:backgroundTint="@color/white"
-                android:src="@drawable/ic_desktop" />
-
-            <ImageButton
-                android:id="@+id/imageButton8"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:backgroundTint="@color/white"
-                android:src="@drawable/ic_mhs" />
-
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppinssemibold"
+        android:text="Ketua Program Studi"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_nama"
+        tools:layout_editor_absoluteX="120dp" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cd_white"
-        android:layout_width="0dp"
+        android:layout_width="415dp"
         android:layout_height="0dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
         android:backgroundTint="@color/baground"
-        app:layout_constraintBottom_toTopOf="@+id/cd_nav"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_foto">
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/cl_dashboard"
@@ -91,7 +63,7 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="167dp"
                 android:layout_height="92dp"
-                android:layout_marginTop="116dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginEnd="32dp"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="10dp"
@@ -135,7 +107,7 @@
                 android:layout_width="167dp"
                 android:layout_height="92dp"
                 android:layout_marginStart="32dp"
-                android:layout_marginTop="116dp"
+                android:layout_marginTop="20dp"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="10dp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -174,32 +146,11 @@
             </androidx.cardview.widget.CardView>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <TextView
-            android:id="@+id/tv_nama"
-            android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:layout_marginLeft="80sp"
-            android:layout_marginTop="20sp"
-            android:fontFamily="@font/poppinssemibold"
-            android:text="Husnil Kamil,M.T"
-            android:textColor="@color/black"
-            android:textSize="30sp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="120dp"
-            android:layout_marginTop="65dp"
-            android:fontFamily="@font/poppinssemibold"
-            android:text="Ketua Program Studi"
-            android:textColor="@color/black"
-            android:textSize="16sp" />
-
         <androidx.cardview.widget.CardView
             android:layout_width="352dp"
             android:layout_height="121dp"
             android:layout_marginLeft="30dp"
-            android:layout_marginTop="240dp"
+            android:layout_marginTop="140dp"
             android:backgroundTint="@color/cardview_light_background"
             app:cardCornerRadius="25dp"
             app:layout_constraintBottom_toBottomOf="parent">
@@ -249,7 +200,7 @@
             android:layout_width="352dp"
             android:layout_height="121dp"
             android:layout_marginLeft="30dp"
-            android:layout_marginTop="370dp"
+            android:layout_marginTop="280dp"
             android:backgroundTint="@color/cardview_light_background"
             app:cardCornerRadius="25dp"
             app:layout_constraintBottom_toBottomOf="parent">
@@ -310,17 +261,20 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:backgroundTint="@color/main"
+        android:onClick="showPopupMenu"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_baseline_menu_24" />
+        app:srcCompat="@drawable/ic_baseline_menu_24"
+        tools:ignore="OnClick" />
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="37dp"
-        android:layout_height="33dp"
+    <ImageButton
+        android:id="@+id/imageButtonLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:background="@color/main"
+        android:backgroundTint="@color/main"
+        android:onClick="logoutClick"
         app:layout_constraintBottom_toBottomOf="@+id/imageButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"

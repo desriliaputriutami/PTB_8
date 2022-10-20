@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 import com.example.a8.adapters.PermintaanTAAdapter;
@@ -154,6 +155,16 @@ public class ListPermintaanTA extends AppCompatActivity implements PermintaanTAA
     public void onItemAgendaClick(PermintaanTA permintaan) {
         Intent detailIntent = new Intent (this,PermintaanTADetailActivity.class);
         detailIntent.putExtra("NAMA_MHS", permintaan.getNamaMhs());
+        startActivity(detailIntent);
+    }
+
+    public void backClick(View view) {
+        Intent detailIntent = new Intent (this,MainActivity.class);
+        startActivity(detailIntent);
+    }
+
+    public void logoutClick(View view) {
+        Intent detailIntent = new Intent (this,Login.class);
         startActivity(detailIntent);
     }
 }
