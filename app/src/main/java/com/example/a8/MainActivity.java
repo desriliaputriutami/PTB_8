@@ -19,13 +19,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        rvData = findViewById(R.id.rv_data);
+        rvData = findViewById(R.id.list_mahasiswa);
 
         DataAdapter adapter = new DataAdapter(new ArrayList<>());
         LinearLayoutManager LayoutManager = new LinearLayoutManager(this);
 
         rvData.setLayoutManager(LayoutManager);
-        rvData.setLayoutManager(adapter);
 
 
 
