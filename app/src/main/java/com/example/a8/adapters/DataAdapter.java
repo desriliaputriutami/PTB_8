@@ -48,9 +48,8 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.DataViewHolder
     public void onBindViewHolder(@NonNull DataViewHolder holder, int position) {     //method yang digunakan untuk menempatkan data ke dalam recycleview nya
         Data data = listData.get(position);
         //holder.imageView4.setImageDrawable(R.drawable.profile);
-        holder.nama_mahasiswa_ta.setText(data.getNama());
-        holder.judul_ta.setText(data.getJudul());
-
+        holder.nama_mahasiswa_ta.setText(data.getNama().toString());
+        holder.judul_ta.setText(data.getJudul().toString());
     }
 
 
@@ -66,13 +65,14 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.DataViewHolder
     public class DataViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
         public ImageView imageView4;
-        public TextView nama_mahasiswa_ta,judul_ta;
+        public TextView nama_mahasiswa_ta, judul_ta;
 
         public DataViewHolder(@NonNull View itemview) {
             super(itemview);
             imageView4 = itemview.findViewById(R.id.imageView4);
             nama_mahasiswa_ta = itemview.findViewById(R.id.nama_mahasiswa_ta);
             judul_ta = itemview.findViewById(R.id.judul_ta);
+
 
             itemView.setOnClickListener(this);
         }

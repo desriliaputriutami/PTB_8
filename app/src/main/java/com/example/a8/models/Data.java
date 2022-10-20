@@ -17,7 +17,6 @@ public class Data {
     public String getGambar() {
         return gambar;
     }
-
     public void setGambar(String gambar) {
         this.gambar = gambar;
     }
@@ -25,7 +24,6 @@ public class Data {
     public String getNama() {
         return nama;
     }
-
     public void setNama(String nama) {
         this.nama = nama;
     }
@@ -33,8 +31,9 @@ public class Data {
     public String getJudul() {
         return judul;
     }
-
     public void setJudul(String judul) {
         this.judul = judul;
     }
+
+
 }

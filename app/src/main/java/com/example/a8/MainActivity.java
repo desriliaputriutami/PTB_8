@@ -37,47 +37,59 @@ public class MainActivity extends AppCompatActivity implements DataAdapter.ItemD
         ListData.add(new Data(
                 null,
                 "Dwi Sasongko",
-                "Ini tuh judul TA nya si Sasongko"
+                "Implementation Android blablabla"
+
+
+
+
         ));
         ListData.add(new Data(
                 null,
                 "Putri Andini",
-                "Ini tuh judul TA nya si Putri"
+                "Membuat Website dengan Smadav"
+
         ));
         ListData.add(new Data(
                 null,
                 "Abigail Louis",
                 "Ini tuh judul TA nya si Abigail"
+
+        ));
+        ListData.add(new Data(
+                null,
+                "Fatimah Azzahra",
+                "Implementasi Machine Learning pada data foreign exchange"
+
+        ));
+        ListData.add(new Data(
+                null,
+                "Andini Putri",
+                "Implementasi IoT pada kegiatan perkuliahan"
+
+        ));
+        ListData.add(new Data(
+                null,
+                "Amirah Nasution",
+                "Membuat website"
+
+        ));
+        ListData.add(new Data(
+                null,
+                "Erika Prihadi",
+                "Ini tuh judul TA nya"
+
         ));
         ListData.add(new Data(
                 null,
                 "Putra",
                 "Ini tuh judul TA nya"
+
         ));
         ListData.add(new Data(
                 null,
                 "Putra",
                 "Ini tuh judul TA nya"
-        ));
-        ListData.add(new Data(
-                null,
-                "Putra",
-                "Ini tuh judul TA nya"
-        ));
-        ListData.add(new Data(
-                null,
-                "Putra",
-                "Ini tuh judul TA nya"
-        ));
-        ListData.add(new Data(
-                null,
-                "Putra",
-                "Ini tuh judul TA nya"
-        ));
-        ListData.add(new Data(
-                null,
-                "Putra",
-                "Ini tuh judul TA nya"
+
         ));
 
         return ListData;
@@ -87,8 +99,10 @@ public class MainActivity extends AppCompatActivity implements DataAdapter.ItemD
     @Override
     public void onItemDataClick(Data data) {
         Intent detailIntent = new Intent(this, detail_TA_Activity2.class); //buat pindah ke halaman berikutnya :)
-        detailIntent.putExtra("nama_mahasiswa", data.getNama().toString());   //buat nge load data nya ke halaman detail mahasiswa TA
+        detailIntent.putExtra("nama_mahasiswa", data.getNama().toString());   //buat nge load data nama nya ke halaman detail mahasiswa TA
+        detailIntent.putExtra("isi_judul_tugas_akhir", data.getJudul().toString());  //buat nge load data judul nya ke halaman detail mahasiswa TA
         startActivity(detailIntent);
+
 
 
     }
