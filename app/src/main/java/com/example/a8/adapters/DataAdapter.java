@@ -16,11 +16,21 @@ import java.util.ArrayList;
 
 public class DataAdapter extends RecyclerView.Adapter<DataAdapter.DataViewHolder> {
 
-    ArrayList<Data> ListData = new ArrayList<>();   //tempat nyimpan data yang akan ditampilkan ke recycleview
+    ArrayList<Data> listData = new ArrayList<>();   //tempat nyimpan data yang akan ditampilkan ke recycleview
+    ItemDataClickListener listener;
 
     public DataAdapter(ArrayList<Data> listData) {
-        ListData = listData;
+        this.listData = listData;
     }
+
+    public void setListData(ArrayList<Data> listData) {
+        this.listData = listData;
+    }
+
+    public void setListener(ItemDataClickListener listener) {
+        this.listener = listener;
+    }
+
 
 
 
@@ -36,7 +46,7 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.DataViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull DataViewHolder holder, int position) {     //method yang digunakan untuk menempatkan data ke dalam recycleview nya
-        Data data = ListData.get(position);
+        Data data = listData.get(position);
         //holder.imageView4.setImageDrawable(R.drawable.profile);
         holder.nama_mahasiswa_ta.setText(data.getNama());
         holder.judul_ta.setText(data.getJudul());
@@ -47,10 +57,13 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.DataViewHolder
 
     @Override
     public int getItemCount() {
-        return ListData.size();
+        return listData.size();
+    }
+    public interface ItemDataClickListener{
+        void onItemDataClick(Data data);
     }
 
-    public class DataViewHolder extends RecyclerView.ViewHolder{
+    public class DataViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
         public ImageView imageView4;
         public TextView nama_mahasiswa_ta,judul_ta;
@@ -61,6 +74,13 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.DataViewHolder
             nama_mahasiswa_ta = itemview.findViewById(R.id.nama_mahasiswa_ta);
             judul_ta = itemview.findViewById(R.id.judul_ta);
 
+            itemView.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View view) {
+            Data data = listData.get(getAdapterPosition());
+            listener.onItemDataClick(data);
 
         }
     }

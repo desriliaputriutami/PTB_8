@@ -1,5 +1,6 @@
 package com.example.a8;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,7 +12,7 @@ import com.example.a8.models.Data;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements DataAdapter.ItemDataClickListener{
 
     private RecyclerView rvData;
     private Data dataTA;
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         DataAdapter adapter = new DataAdapter(getData());
+        adapter.setListener(this);
         LinearLayoutManager LayoutManager = new LinearLayoutManager(this);
 
         rvData.setLayoutManager(LayoutManager);
@@ -35,17 +37,17 @@ public class MainActivity extends AppCompatActivity {
         ListData.add(new Data(
                 null,
                 "Dwi Sasongko",
-                "Ini tuh judul TA nya"
+                "Ini tuh judul TA nya si Sasongko"
         ));
         ListData.add(new Data(
                 null,
-                "Putri",
-                "Ini tuh judul TA nya"
+                "Putri Andini",
+                "Ini tuh judul TA nya si Putri"
         ));
         ListData.add(new Data(
                 null,
-                "Putra",
-                "Ini tuh judul TA nya"
+                "Abigail Louis",
+                "Ini tuh judul TA nya si Abigail"
         ));
         ListData.add(new Data(
                 null,
@@ -82,4 +84,12 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    public void onItemDataClick(Data data) {
+        Intent detailIntent = new Intent(this, detail_TA_Activity2.class); //buat pindah ke halaman berikutnya :)
+        detailIntent.putExtra("nama_mahasiswa", data.getNama().toString());   //buat nge load data nya ke halaman detail mahasiswa TA
+        startActivity(detailIntent);
+
+
+    }
 }

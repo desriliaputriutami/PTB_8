@@ -37,7 +37,7 @@
       app:layout_constraintVertical_bias="0.07999998" />
 
   <TextView
-      android:id="@+id/nama"
+      android:id="@+id/nama_mahasiswa"
       android:layout_width="94dp"
       android:layout_height="23dp"
       android:layout_marginStart="10dp"
@@ -62,8 +62,8 @@
       android:textSize="14sp"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintHorizontal_bias="0.0"
-      app:layout_constraintStart_toStartOf="@+id/nama"
-      app:layout_constraintTop_toBottomOf="@+id/nama" />
+      app:layout_constraintStart_toStartOf="@+id/nama_mahasiswa"
+      app:layout_constraintTop_toBottomOf="@+id/nama_mahasiswa" />
 
   <TextView
       android:id="@+id/judul_tugas_akhir"
@@ -214,11 +214,11 @@
       android:layout_width="327dp"
       android:layout_height="wrap_content"
 
-      android:layout_marginTop="20dp"
-      android:layout_marginBottom="80dp"
+      android:layout_marginTop="200dp"
+      android:layout_marginBottom="5dp"
       android:backgroundTint="@color/main"
       android:text="List Peserta Seminar"
-      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintBottom_toTopOf="@+id/buttonListLogbook"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@+id/Jadwal" />

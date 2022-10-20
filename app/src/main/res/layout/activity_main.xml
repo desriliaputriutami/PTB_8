@@ -29,7 +29,7 @@
         android:layout_marginBottom="50dp"
         android:backgroundTint="#000000"
         android:fontFamily="@font/poppinssemibold"
-        android:text="Detail TA"
+        android:text="List Mahasiswa TA"
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
