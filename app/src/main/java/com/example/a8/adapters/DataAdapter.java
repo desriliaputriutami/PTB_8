@@ -34,8 +34,6 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.DataViewHolder
 
     }
 
-
-
     @Override
     public void onBindViewHolder(@NonNull DataViewHolder holder, int position) {     //method yang digunakan untuk menempatkan data ke dalam recycleview nya
         Data data = ListData.get(position);
