@@ -167,4 +167,5 @@ public class ListPermintaanTA extends AppCompatActivity implements PermintaanTAA
         Intent detailIntent = new Intent (this,Login.class);
         startActivity(detailIntent);
     }
+
 }
