@@ -26,13 +26,14 @@
             tools:srcCompat="@drawable/logounand" />
 
         <TextView
-            android:id="@+id/textMhsType"
+            android:id="@+id/textWaktu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="3dp"
-            android:text="Kuliah"
-            android:textSize="12sp"
+            android:fontFamily="@font/poppinsregular"
+            android:text="8m ago"
+            android:textSize="10sp"
             android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@+id/imageMhs"
             app:layout_constraintTop_toTopOf="@+id/imageMhs" />
@@ -41,43 +42,21 @@
             android:id="@+id/textRujukan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Pemograman Teknologi Bergerak (A)"
+            android:layout_marginTop="4dp"
+            android:text="Mardana Dulas"
             android:textColor="#100D0D"
             android:textStyle="normal|bold"
             app:layout_constraintEnd_toStartOf="@+id/imageStatus"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/textMhsType"
-            app:layout_constraintTop_toBottomOf="@+id/textMhsType" />
+            app:layout_constraintStart_toStartOf="@+id/textWaktu"
+            app:layout_constraintTop_toBottomOf="@+id/textWaktu" />
 
         <TextView
-            android:id="@+id/textWaktu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:text="'@'"
-            android:textSize="12sp"
-            android:textStyle="italic"
-            app:layout_constraintBottom_toBottomOf="@+id/textWaktu2"
-            app:layout_constraintStart_toEndOf="@+id/textWaktu2" />
-
-        <TextView
-            android:id="@+id/textTempat"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:text="H2.1"
-            android:textSize="12sp"
-            android:textStyle="italic"
-            app:layout_constraintBottom_toBottomOf="@+id/textWaktu2"
-            app:layout_constraintStart_toEndOf="@+id/textWaktu" />
-
-        <TextView
-            android:id="@+id/textWaktu2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/textTA"
+            android:layout_width="240dp"
+            android:layout_height="38dp"
             android:layout_marginTop="8dp"
-            android:text="12.00 - 15.00"
+            android:text="PENERAPAN LOGIKA FUZZY TSUKAMOTO BERBASIS WEB UNTUK..."
             android:textSize="12sp"
             android:textStyle="italic"
             app:layout_constraintStart_toStartOf="@+id/textRujukan"

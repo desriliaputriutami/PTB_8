@@ -44,11 +44,10 @@ public class PermintaanTAAdapter extends RecyclerView.Adapter<PermintaanTAAdapte
     @Override
     public void onBindViewHolder(@NonNull MahasiswaViewHolder holder, int position) {
         PermintaanTA permintaanTA = listPermintaanTA.get(position);
-        //holder.imageMhs.setImageResource(R.drawable.logounand);
+        holder.imageMhs.setImageResource(R.drawable.logounand);
         holder.textNamaMhs.setText(permintaanTA.getNamaMhs());
-        holder.textMhsType.setText(Integer.toString(permintaanTA.getTipeMhs()));
         holder.textWaktu.setText(permintaanTA.getWaktu());
-        holder.textTempat.setText(permintaanTA.getTempat());
+        holder.textTA.setText(permintaanTA.getJudul());
     }
 
     @Override
@@ -63,17 +62,16 @@ public class PermintaanTAAdapter extends RecyclerView.Adapter<PermintaanTAAdapte
     public class MahasiswaViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         public ImageView imageMhs, imageStatus;
-        public TextView textMhsType, textNamaMhs, textWaktu, textTempat;
+        public TextView textNamaMhs, textWaktu, textTA;
 
 
         public MahasiswaViewHolder(@NonNull View itemView) {
             super(itemView);
             imageMhs = itemView.findViewById(R.id.imageMhs);
             imageStatus =itemView.findViewById(R.id.imageStatus);
-            textMhsType =itemView.findViewById(R.id.textMhsType);
             textNamaMhs =itemView.findViewById(R.id.textRujukan);
             textWaktu =itemView.findViewById(R.id.textWaktu);
-            textTempat =itemView.findViewById(R.id.textTempat);
+            textTA =itemView.findViewById(R.id.textTA);
 
             itemView.setOnClickListener(this);
         }

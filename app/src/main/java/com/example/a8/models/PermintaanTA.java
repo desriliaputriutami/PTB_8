@@ -3,19 +3,26 @@ package com.example.a8.models;
 public class PermintaanTA {
 
     String gambar;
-    int tipeMhs;
     String namaMhs;
     String waktu;
-    String tempat;
+    String judul;
     int status;
 
     public PermintaanTA(){ }
-    public PermintaanTA(String gambar, int tipeMhs, String namaMhs, String waktu, String tempat, int status) {
+
+    public String getJudul() {
+        return judul;
+    }
+
+    public void setJudul(String judul) {
+        this.judul = judul;
+    }
+
+    public PermintaanTA(String gambar, String namaMhs, String waktu, String judul, int status) {
         this.gambar = gambar;
-        this.tipeMhs = tipeMhs;
         this.namaMhs = namaMhs;
         this.waktu = waktu;
-        this.tempat = tempat;
+        this.judul = judul;
         this.status = status;
     }
 
@@ -25,14 +32,6 @@ public class PermintaanTA {
 
     public void setGambar(String gambar) {
         this.gambar = gambar;
-    }
-
-    public int getTipeMhs() {
-        return tipeMhs;
-    }
-
-    public void setTipeMhs(int tipeMhs) {
-        this.tipeMhs = tipeMhs;
     }
 
     public String getNamaMhs() {
@@ -49,14 +48,6 @@ public class PermintaanTA {
 
     public void setWaktu(String waktu) {
         this.waktu = waktu;
-    }
-
-    public String getTempat() {
-        return tempat;
-    }
-
-    public void setTempat(String tempat) {
-        this.tempat = tempat;
     }
 
     public int getStatus() {
