@@ -8,12 +8,12 @@
 
     <TextView
         android:id="@+id/textJudul2"
-        android:layout_width="222dp"
-        android:layout_height="67dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginEnd="16dp"
         android:fontFamily="@font/poppinsbold"
-        android:text="Permintaan Anda Berhasil Dikirim"
+        android:text="Pembimbing Berhasil Ditambahkan"
         android:textAlignment="center"
         android:textColor="@color/main"
         android:textSize="24sp"
