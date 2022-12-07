@@ -1,6 +1,6 @@
 package com.example.a8.models;
 
-public class PermintaanTA {
+public class PermintaanSidang {
 
     String gambar;
     String namaMhs;
@@ -8,7 +8,7 @@ public class PermintaanTA {
     String judul;
     int status;
 
-    public PermintaanTA(){ }
+    public PermintaanSidang(){ }
 
     public String getJudul() {
         return judul;
@@ -18,7 +18,7 @@ public class PermintaanTA {
         this.judul = judul;
     }
 
-    public PermintaanTA(String gambar, String namaMhs, String waktu, String judul, int status) {
+    public PermintaanSidang(String gambar, String namaMhs, String waktu, String judul, int status) {
         this.gambar = gambar;
         this.namaMhs = namaMhs;
         this.waktu = waktu;

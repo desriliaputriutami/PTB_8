@@ -9,153 +9,153 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
-import com.example.a8.adapters.PermintaanTAAdapter;
-import com.example.a8.models.PermintaanTA;
+import com.example.a8.adapters.PermintaanSidangAdapter;
+import com.example.a8.models.PermintaanSidang;
 
 import java.util.ArrayList;
 
-public class ListPermintaanTA extends AppCompatActivity implements PermintaanTAAdapter.ItemPermintaanTAClickListener{
+public class ListPermintaanSidang extends AppCompatActivity implements PermintaanSidangAdapter.ItemPermintaanSidangClickListener{
 
-    private RecyclerView rvMhs;
+    private RecyclerView rvSidang;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list_permintaan_ta);
+        setContentView(R.layout.activity_list_permintaan_sidang);
 
-        rvMhs = findViewById(R.id.rv_mhs);
+        rvSidang = findViewById(R.id.rvSidang);
 
-        PermintaanTAAdapter adapter = new PermintaanTAAdapter(getMhs());
+        PermintaanSidangAdapter adapter = new PermintaanSidangAdapter(getMhs());
         adapter.setListener(this);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
 
-        rvMhs.setLayoutManager(layoutManager);
-        rvMhs.setAdapter(adapter);
+        rvSidang.setLayoutManager(layoutManager);
+        rvSidang.setAdapter(adapter);
 
     }
 
-    public ArrayList<PermintaanTA> getMhs(){
-        ArrayList<PermintaanTA> listPermintaanTA = new ArrayList<>();
-        listPermintaanTA.add(new PermintaanTA(
+    public ArrayList<PermintaanSidang> getMhs(){
+        ArrayList<PermintaanSidang> ListPermintaanSidang = new ArrayList<>();
+        ListPermintaanSidang.add(new PermintaanSidang(
                 null,
                 "Mardana Dulas",
                 "8m ago",
                 "PENERAPAN LOGIKA FUZZY TSUKAMOTO BERBASIS WEB UNTUK...",
                 1
         ));
-        listPermintaanTA.add(new PermintaanTA(
+        ListPermintaanSidang.add(new PermintaanSidang(
                 null,
                 "Divo Pratama",
                 "20 Oktober 2022",
                 "PENERAPAN LOGIKA FUZZY TSUKAMOTO BERBASIS WEB UNTUK...",
                 1
         ));
-        listPermintaanTA.add(new PermintaanTA(
+        ListPermintaanSidang.add(new PermintaanSidang(
                 null,
                 "Mardana Dulas",
                 "8m ago",
                 "PENERAPAN LOGIKA FUZZY TSUKAMOTO BERBASIS WEB UNTUK...",
                 1
         ));
-        listPermintaanTA.add(new PermintaanTA(
+        ListPermintaanSidang.add(new PermintaanSidang(
                 null,
                 "Divo Pratama",
                 "20 Oktober 2022",
                 "PENERAPAN LOGIKA FUZZY TSUKAMOTO BERBASIS WEB UNTUK...",
                 1
         ));
-        listPermintaanTA.add(new PermintaanTA(
+        ListPermintaanSidang.add(new PermintaanSidang(
                 null,
                 "Mardana Dulas",
                 "8m ago",
                 "PENERAPAN LOGIKA FUZZY TSUKAMOTO BERBASIS WEB UNTUK...",
                 1
         ));
-        listPermintaanTA.add(new PermintaanTA(
+        ListPermintaanSidang.add(new PermintaanSidang(
                 null,
                 "Divo Pratama",
                 "20 Oktober 2022",
                 "PENERAPAN LOGIKA FUZZY TSUKAMOTO BERBASIS WEB UNTUK...",
                 1
         ));
-        listPermintaanTA.add(new PermintaanTA(
+        ListPermintaanSidang.add(new PermintaanSidang(
                 null,
                 "Mardana Dulas",
                 "8m ago",
                 "PENERAPAN LOGIKA FUZZY TSUKAMOTO BERBASIS WEB UNTUK...",
                 1
         ));
-        listPermintaanTA.add(new PermintaanTA(
+        ListPermintaanSidang.add(new PermintaanSidang(
                 null,
                 "Divo Pratama",
                 "20 Oktober 2022",
                 "PENERAPAN LOGIKA FUZZY TSUKAMOTO BERBASIS WEB UNTUK...",
                 1
         ));
-        listPermintaanTA.add(new PermintaanTA(
+        ListPermintaanSidang.add(new PermintaanSidang(
                 null,
                 "Mardana Dulas",
                 "8m ago",
                 "PENERAPAN LOGIKA FUZZY TSUKAMOTO BERBASIS WEB UNTUK...",
                 1
         ));
-        listPermintaanTA.add(new PermintaanTA(
+        ListPermintaanSidang.add(new PermintaanSidang(
                 null,
                 "Divo Pratama",
                 "20 Oktober 2022",
                 "PENERAPAN LOGIKA FUZZY TSUKAMOTO BERBASIS WEB UNTUK...",
                 1
         ));
-        listPermintaanTA.add(new PermintaanTA(
+        ListPermintaanSidang.add(new PermintaanSidang(
                 null,
                 "Mardana Dulas",
                 "8m ago",
                 "PENERAPAN LOGIKA FUZZY TSUKAMOTO BERBASIS WEB UNTUK...",
                 1
         ));
-        listPermintaanTA.add(new PermintaanTA(
+        ListPermintaanSidang.add(new PermintaanSidang(
                 null,
                 "Divo Pratama",
                 "20 Oktober 2022",
                 "PENERAPAN LOGIKA FUZZY TSUKAMOTO BERBASIS WEB UNTUK...",
                 1
         ));
-        listPermintaanTA.add(new PermintaanTA(
+        ListPermintaanSidang.add(new PermintaanSidang(
                 null,
                 "Mardana Dulas",
                 "8m ago",
                 "PENERAPAN LOGIKA FUZZY TSUKAMOTO BERBASIS WEB UNTUK...",
                 1
         ));
-        listPermintaanTA.add(new PermintaanTA(
+        ListPermintaanSidang.add(new PermintaanSidang(
                 null,
                 "Divo Pratama",
                 "20 Oktober 2022",
                 "PENERAPAN LOGIKA FUZZY TSUKAMOTO BERBASIS WEB UNTUK...",
                 1
         ));
-        listPermintaanTA.add(new PermintaanTA(
+        ListPermintaanSidang.add(new PermintaanSidang(
                 null,
                 "Mardana Dulas",
                 "8m ago",
                 "PENERAPAN LOGIKA FUZZY TSUKAMOTO BERBASIS WEB UNTUK...",
                 1
         ));
-        listPermintaanTA.add(new PermintaanTA(
+        ListPermintaanSidang.add(new PermintaanSidang(
                 null,
                 "Divo Pratama",
                 "20 Oktober 2022",
                 "PENERAPAN LOGIKA FUZZY TSUKAMOTO BERBASIS WEB UNTUK...",
                 1
         ));
-        listPermintaanTA.add(new PermintaanTA(
+        ListPermintaanSidang.add(new PermintaanSidang(
                 null,
                 "Mardana Dulas",
                 "8m ago",
                 "PENERAPAN LOGIKA FUZZY TSUKAMOTO BERBASIS WEB UNTUK...",
                 1
         ));
-        listPermintaanTA.add(new PermintaanTA(
+        ListPermintaanSidang.add(new PermintaanSidang(
                 null,
                 "Divo Pratama",
                 "20 Oktober 2022",
@@ -165,12 +165,12 @@ public class ListPermintaanTA extends AppCompatActivity implements PermintaanTAA
 
 
 
-        return listPermintaanTA;
+        return ListPermintaanSidang;
     }
 
     @Override
-    public void onItemAgendaClick(PermintaanTA permintaan) {
-        Intent detailIntent = new Intent (this,PermintaanTADetailActivity.class);
+    public void onItemAgendaClick(PermintaanSidang permintaan) {
+        Intent detailIntent = new Intent (this,PermintaanSidangDetailActivity.class);
         detailIntent.putExtra("NAMA_MHS", permintaan.getNamaMhs());
         startActivity(detailIntent);
     }

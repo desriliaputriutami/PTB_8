@@ -10,26 +10,26 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.a8.R;
-import com.example.a8.models.PermintaanTA;
+import com.example.a8.models.PermintaanSidang;
 
 import java.util.ArrayList;
 
-public class PermintaanTAAdapter extends RecyclerView.Adapter<PermintaanTAAdapter.MahasiswaViewHolder>{
+public class PermintaanSidangAdapter extends RecyclerView.Adapter<PermintaanSidangAdapter.MahasiswaViewHolder>{
 
-    ArrayList<PermintaanTA> listPermintaanTA = new ArrayList<>();
+    ArrayList<PermintaanSidang> listPermintaanSidang = new ArrayList<>();
 
 
-    ItemPermintaanTAClickListener listener;
+    ItemPermintaanSidangClickListener listener;
 
-    public PermintaanTAAdapter(ArrayList<PermintaanTA> listPermintaanTA) {
-        this.listPermintaanTA = listPermintaanTA;
+    public PermintaanSidangAdapter(ArrayList<PermintaanSidang> listPermintaanSidang) {
+        this.listPermintaanSidang = listPermintaanSidang;
     }
 
-    public void setListMahasiswa(ArrayList<PermintaanTA> listPermintaanTA) {
-        this.listPermintaanTA = listPermintaanTA;
+    public void setListMahasiswa(ArrayList<PermintaanSidang> listPermintaanSidang) {
+        this.listPermintaanSidang = listPermintaanSidang;
     }
 
-    public void setListener(ItemPermintaanTAClickListener listener) {
+    public void setListener(ItemPermintaanSidangClickListener listener) {
         this.listener = listener;
     }
 
@@ -43,21 +43,21 @@ public class PermintaanTAAdapter extends RecyclerView.Adapter<PermintaanTAAdapte
 
     @Override
     public void onBindViewHolder(@NonNull MahasiswaViewHolder holder, int position) {
-        PermintaanTA permintaanTA = listPermintaanTA.get(position);
+        PermintaanSidang PermintaanSidang = listPermintaanSidang.get(position);
         holder.imageMhs.setImageResource(R.drawable.logounand);
-        holder.textNamaMhs.setText(permintaanTA.getNamaMhs());
-        holder.textWaktu.setText(permintaanTA.getWaktu());
-        holder.textTA.setText(permintaanTA.getJudul());
+        holder.textNamaMhs.setText(PermintaanSidang.getNamaMhs());
+        holder.textWaktu.setText(PermintaanSidang.getWaktu());
+        holder.textTA.setText(PermintaanSidang.getJudul());
     }
 
     @Override
     public int getItemCount() {
 
-        return listPermintaanTA.size();
+        return listPermintaanSidang.size();
     }
 
-    public interface ItemPermintaanTAClickListener{
-       void onItemAgendaClick (PermintaanTA permintaan);
+    public interface ItemPermintaanSidangClickListener{
+        void onItemAgendaClick (PermintaanSidang permintaan);
     }
     public class MahasiswaViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
@@ -78,8 +78,8 @@ public class PermintaanTAAdapter extends RecyclerView.Adapter<PermintaanTAAdapte
 
         @Override
         public void onClick(View view) {
-            PermintaanTA permintaanta =listPermintaanTA.get(getAdapterPosition());
-            listener.onItemAgendaClick(permintaanta);
+            PermintaanSidang PermintaanSidang =listPermintaanSidang.get(getAdapterPosition());
+            listener.onItemAgendaClick(PermintaanSidang);
         }
     }
 }
