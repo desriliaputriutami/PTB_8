@@ -1,7 +1,7 @@
 package com.example.a8;
 
 
-import android.view.View;
+
 
 
 public class detail_TA_Activity extends AppCompatActivity {
