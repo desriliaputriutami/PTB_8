@@ -16,11 +16,6 @@ public class detail_TA_Activity extends AppCompatActivity {
     TextView nama_mahasiswa;         //id dari nama yang ada di halaman detail mahasiswa TA
     TextView isi_judul_tugas_akhir;   //id dari judul yang ada di halaman detail mahasiswa TA
 
-    String namaData;
-    String judulData;
-
-    TextView nama_mahasiswa;         //id dari nama yang ada di halaman detail mahasiswa TA
-    TextView isi_judul_tugas_akhir;   //id dari judul yang ada di halaman detail mahasiswa TA
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
