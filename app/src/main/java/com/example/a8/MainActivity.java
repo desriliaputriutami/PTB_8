@@ -1,18 +1,15 @@
 package com.example.a8;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.PopupMenu;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -71,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         if (id == R.id.item5){
-            Intent i = new Intent(MainActivity.this,ListPermintaanTA.class);
+            Intent i = new Intent(MainActivity.this, ListMahasiswaTA.class);
             startActivity(i);
             finish();
             return true;
