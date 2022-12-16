@@ -2,7 +2,7 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/card_logbook"
+    android:id="@+id/card_kelas"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="4dp"
@@ -14,7 +14,7 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/nama_mahasiswa_logbook"
+            android:id="@+id/nama_mahasiswa_ta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
@@ -22,11 +22,11 @@
             android:textColor="@color/black"
             android:textSize="18dp"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/foto_mahasiswa_logbook"
-            app:layout_constraintTop_toTopOf="@+id/foto_mahasiswa_logbook" />
+            app:layout_constraintStart_toEndOf="@+id/imageView4"
+            app:layout_constraintTop_toTopOf="@+id/imageView4" />
 
         <ImageView
-            android:id="@+id/foto_mahasiswa_logbook"
+            android:id="@+id/imageView4"
             android:layout_width="83dp"
             android:layout_height="88dp"
             android:layout_marginStart="16dp"
@@ -38,12 +38,12 @@
             app:srcCompat="@drawable/profile" />
 
         <TextView
-            android:id="@+id/logbook_progres_ta_mahasiswa"
+            android:id="@+id/judul_ta"
             android:layout_width="256dp"
             android:layout_height="51dp"
             android:layout_marginTop="5dp"
             android:text="Sistem Pengaturan Pencahayaan Ruangan Berbasis Pada Rumah Pintar"
-            app:layout_constraintStart_toStartOf="@+id/nama_mahasiswa_logbook"
-            app:layout_constraintTop_toBottomOf="@+id/nama_mahasiswa_logbook" />
+            app:layout_constraintStart_toStartOf="@+id/nama_mahasiswa_ta"
+            app:layout_constraintTop_toBottomOf="@+id/nama_mahasiswa_ta" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

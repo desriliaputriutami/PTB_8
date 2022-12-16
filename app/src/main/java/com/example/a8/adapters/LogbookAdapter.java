@@ -14,38 +14,39 @@ import com.example.a8.models.Logbook;
 
 import java.util.ArrayList;
 
-public class LogbookAdapter extends RecyclerView.Adapter<LogbookAdapter.LogbookViewHolder> {
+public class LogbookAdapter extends RecyclerView.Adapter<LogbookAdapter.DataViewHolder> {
 
-    ArrayList<Logbook> listLogbook = new ArrayList<>();   //tempat nyimpan data yang akan ditampilkan ke recycleview
-    ItemLogbookClickListener listener;
+    ArrayList<Logbook> listData = new ArrayList<>();   //tempat nyimpan data yang akan ditampilkan ke recycleview
+    ItemDataClickListener listener;
 
-    public LogbookAdapter(ArrayList<Logbook> listLogbook) {
-        this.listLogbook = listLogbook;
+    public LogbookAdapter(ArrayList<Logbook> listData) {
+        this.listData = listData;
     }
 
-    public void setListLogbook(ArrayList<Logbook> listLogbook) {
-        this.listLogbook = listLogbook;
+    public void setListData(ArrayList<Logbook> listData) {
+        this.listData = listData;
     }
 
-    public void setListener(ItemLogbookClickListener listener) {
+    public void setListener(ItemDataClickListener listener) {
         this.listener = listener;
     }
 
 
 
+
     @NonNull
     @Override
-    public LogbookViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {           //method yang akan digunakan untuk membuat viewholder yang nanti akan digunakan untuk menampilkan data
+    public DataViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {           //method yang akan digunakan untuk membuat viewholder yang nanti akan digunakan untuk menampilkan data
         View view = LayoutInflater.from(parent.getContext())        //layout inflatter adalah class yang digunakan untuk load layout ke dalam recycle kita
                 .inflate(R.layout.item_logbook, parent, false);
-        return new LogbookViewHolder(view);
+        return new DataViewHolder(view);
 
 
     }
 
     @Override
-    public void onBindViewHolder(@NonNull LogbookViewHolder holder, int position) {     //method yang digunakan untuk menempatkan data ke dalam recycleview nya
-        Logbook logbook = listLogbook.get(position);
+    public void onBindViewHolder(@NonNull DataViewHolder holder, int position) {     //method yang digunakan untuk menempatkan data ke dalam recycleview nya
+        Logbook logbook = listData.get(position);
         //holder.imageView4.setImageDrawable(R.drawable.profile);
         holder.nama_mahasiswa_ta.setText(logbook.getNama().toString());
         holder.judul_ta.setText(logbook.getJudul().toString());
@@ -55,18 +56,18 @@ public class LogbookAdapter extends RecyclerView.Adapter<LogbookAdapter.LogbookV
 
     @Override
     public int getItemCount() {
-        return listLogbook.size();
+        return listData.size();
     }
-    public interface ItemLogbookClickListener{
-        void onItemLogbookClick(Logbook logbook);
+    public interface ItemDataClickListener{
+        void onItemDataClick(Logbook logbook);
     }
 
-    public class LogbookViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+    public class DataViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
         public ImageView imageView4;
         public TextView nama_mahasiswa_ta, judul_ta;
 
-        public LogbookViewHolder(@NonNull View itemview) {
+        public DataViewHolder(@NonNull View itemview) {
             super(itemview);
             imageView4 = itemview.findViewById(R.id.imageView4);
             nama_mahasiswa_ta = itemview.findViewById(R.id.nama_mahasiswa_ta);
@@ -78,8 +79,8 @@ public class LogbookAdapter extends RecyclerView.Adapter<LogbookAdapter.LogbookV
 
         @Override
         public void onClick(View view) {
-            Logbook logbook = listLogbook.get(getAdapterPosition());
-            listener.onItemLogbookClick(logbook);
+            Logbook logbook = listData.get(getAdapterPosition());
+            listener.onItemDataClick(logbook);
 
         }
     }
