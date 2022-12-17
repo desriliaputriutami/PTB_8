@@ -5,17 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".ListLogbook">
+    tools:context=".ListPesertaSeminar">
 
 
     <Button
-        android:id="@+id/button_back_list_logbook"
+        android:id="@+id/button_back_list_peserta_seminar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:layout_marginTop="5dp"
         android:backgroundTint="@color/white"
-        android:onClick="onbutton_back_list_logbookClick"
+        android:onClick="onbutton_back_list_peserta_seminarClick"
         android:text="Back"
         android:textColor="@color/black"
         android:textSize="13sp"
@@ -23,14 +23,14 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/foto_mahasiswa_logbook"
+        android:id="@+id/judul_halaman_list_peserta_seminar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="50dp"
         android:backgroundTint="#000000"
         android:fontFamily="@font/poppinssemibold"
-        android:text="List Logbook"
+        android:text="List Peserta Seminar"
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -40,16 +40,16 @@
         app:layout_constraintVertical_bias="0.07999998" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/list_logbok"
-        android:layout_width="393dp"
-        android:layout_height="492dp"
+        android:id="@+id/list_peserta_seminar"
+        android:layout_width="410dp"
+        android:layout_height="487dp"
         android:layout_marginTop="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/foto_mahasiswa_logbook"
+        app:layout_constraintTop_toBottomOf="@+id/judul_halaman_list_peserta_seminar"
         app:layout_constraintVertical_bias="1.0"
-        tools:listitem="@layout/item_logbook" />
+        tools:listitem="@layout/item_peserta_seminar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
