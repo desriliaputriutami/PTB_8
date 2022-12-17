@@ -44,6 +44,10 @@ public class detail_TA_Activity extends AppCompatActivity {
         Intent i = new Intent(this, ListLogbook.class);
         startActivity(i);
     }
+    public void onbuttonListPesertaSeminarClick(View view) {
+        Intent i = new Intent(this, ListPesertaSeminar.class);
+        startActivity(i);
+    }
 
 
 
