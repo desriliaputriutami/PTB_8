@@ -9,5 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="main">#006175</color>
     <color name="baground">#EFF6FF</color>
+    <color name="red">#FF0000</color>
+    <color name="yellow">#FFCC00</color>
 
 </resources>
