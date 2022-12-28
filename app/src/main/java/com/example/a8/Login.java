@@ -13,6 +13,7 @@ import android.content.SharedPreferences;
 import android.graphics.PorterDuff;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -22,13 +23,17 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 //import com.example.a8.models.loginResponse;
+import com.example.a8.route.Route;
 import com.google.android.material.button.MaterialButton;
 
 import java.io.IOException;
 
+import okhttp3.OkHttpClient;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 
 public class Login extends AppCompatActivity {
@@ -37,121 +42,96 @@ public class Login extends AppCompatActivity {
     //notifikasi
     //1. deklarasi objek
     private static final String CHANNEL_ID="Kelompok 8";
-    private Button btn_login;
+    //private Button btn_login;
     private NotificationManagerCompat notificationManager;
 
-    private EditText inputEmail;
-    private EditText inputPassword;
-    private Config config;
+    //referensi ibal buat login
+    //private EditText inputEmail;
+    //private EditText inputPassword;
+    //private Config config;
+
+    //buat login
+    EditText editEmail, editPassword;   //buat ambil data email dan password yang dimasukkan
+    Button btn_login;                   //ngambil object buttonnya
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        inputEmail = findViewById(R.id.editUsername);
-        inputPassword = findViewById(R.id.editPassword);
+        //inputEmail = findViewById(R.id.editUsername);
+        //inputPassword = findViewById(R.id.editPassword);
 
-        test();
+        Button btnLogin = findViewById(R.id.btn_login);
+        btnLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                cekLogin();
+            }
+        });
     }
 
 
-    //=================<<validasi username dan password >>========================
-    public void toHome(View view){
-        String email = inputEmail.getText().toString(). trim();
-        String password = inputPassword.getText().toString().trim();
+    //========================<<validasi username dan password >>=====================================
+    public void cekLogin(){
+        editEmail = findViewById(R.id.editUsername);
+        editPassword = findViewById(R.id.editPassword);
+        btn_login = findViewById(R.id.btn_login);
 
-        if(validation(email, password).equals(1)){
-            config = new Config();
-            Call<LoginResponse> call = config.configRetrofit().login(email, password);
-            toggleViewProgressBar(true);
-            call.enqueue(new Callback<LoginResponse>() {
-                @Override
-                public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
-                    String message = null;
-                    JSONObject jsonObject = null;
 
-                    if(response.code() == 200){
-                        if (response.isSuccessful()){
-                            LoginResponse loginResponse = response.body();
-                            String token = loginResponse.getAuthorisation().getToken();
-                            String nama = loginResponse.getUser().getUsername();
-                            String email = loginResponse.getUser().getEmail();
-//                            String no_hp = loginResponse.getUser().get();
-                            message = loginResponse.getStatus();
+        //abis tu, kita perlu buat handler untuk, ketika di click maka dia akan cek login
+        String API_BASE_URL = "http://ptb-api.husnilkamil.my.id/";
+        String email = editEmail.getText().toString();          //ambil data email yang di entry kan oleh si pengguna
+        String password = editPassword.getText().toString();    //ambil data password yang di entry kan oleh si pengguna
 
-                            SharedPreferences sharedPreferences = getSharedPreferences("com.nongskuy.nongskuy.PREFS", MODE_PRIVATE);
-                            SharedPreferences.Editor editor = sharedPreferences.edit();
-                            editor.putString("Token", token);
-                            editor.putString("Nama", nama);
-                            editor.putString("Email", email);
-                          //  editor.putString("NoHp", no_hp);
-                            editor.apply();
 
-                            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                            startActivity(intent);
-                            finish();
-                        }
-                    }
-                    else if(response.code() == 400){
-                        if(!response.isSuccessful()) {
-                            try {
-                                jsonObject = new JSONObject(response.errorBody().string());
-                                message = jsonObject.getString("message");
-                            } catch (JSONException | IOException e) {
-                                e.printStackTrace();
-                            }
-                        }
-                    }
-                    else if(response.code() == 403){
-                        if(!response.isSuccessful()){
-                            try {
-                                jsonObject = new JSONObject(response.errorBody().string());
-                                message = jsonObject.getString("message");
-                            } catch (JSONException | IOException e) {
-                                e.printStackTrace();
-                            }
-                        }
-                    }
 
-                    // menampilkan pesan
-                    Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
-                    toggleViewProgressBar(false);
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(API_BASE_URL)
+                .addConverterFactory( GsonConverterFactory.create() )
+                .client( new OkHttpClient.Builder().build() )
+                .build();
+
+        Route client = retrofit.create(Route.class);
+
+        //panggil client
+        Call<LoginResponse> call = client.login(email, password);
+        System.out.println("keprint ini");
+
+        call.enqueue(new Callback<LoginResponse>() {
+            @Override
+            public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
+                LoginResponse loginResponse = response.body();
+
+
+                if(loginResponse !=null){                                     //kalo loginresponsnya tidak sama dengan null artinya ada kita dapatkan object nya, kemungkinan besar sukses
+                    Toast.makeText(Login.this, "sukses login", Toast.LENGTH_SHORT).show();
+                    Intent mainIntent = new Intent(Login.this,MainActivity.class);    //kalo sukses, akan di arahkan ke activity berikutnya
+                    startActivity(mainIntent);
+                }else{
+                    Toast.makeText(Login.this, "gagal menghubungi server", Toast.LENGTH_SHORT).show();
                 }
+            }
 
-                @Override
-                public void onFailure(Call<LoginResponse> call, Throwable t) {
-                    Toast.makeText(getApplicationContext(), t.getMessage(), Toast.LENGTH_SHORT).show();
-                    toggleViewProgressBar(false);
-                }
-            });
-        }
+            @Override
+            public void onFailure(Call<LoginResponse> call, Throwable t) {
+                Toast.makeText(Login.this, t.getMessage(), Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
+
+
+
     }
+
+
+
     //============================================================================
 
 
-    public void toggleViewProgressBar(Boolean active) {
-        Button buttonLogin = findViewById(R.id.btn_login);
-        ProgressBar progressBar = findViewById(R.id.progressBarLogin);
 
-        if(active){
-            inputEmail.getText().clear();
-            inputPassword.getText().clear();
-            inputEmail.setEnabled(false);
-            inputPassword.setEnabled(false);
-            buttonLogin.setEnabled(false);
-            progressBar.setVisibility(View.VISIBLE);
-        }
-        else{
-            inputEmail.setEnabled(true);
-            inputPassword.setEnabled(true);
-            buttonLogin.setEnabled(true);
-            progressBar.setVisibility(View.GONE);
-        }
-    }
 
 
 
@@ -202,28 +182,7 @@ public class Login extends AppCompatActivity {
 
 
 
-    public Integer validation(String email, String password) {
-        Integer valid = 1;
-        if(email.isEmpty()){
-            inputEmail.getBackground().setColorFilter(getResources().getColor(R.color.red), PorterDuff.Mode.SRC_IN);
-            inputEmail.setError("Masukkan email!");
-            valid = 0;
-        }
-        else{
-            inputEmail.getBackground().setColorFilter(getResources().getColor(R.color.yellow), PorterDuff.Mode.SRC_ATOP);
-        }
 
-        if(password.isEmpty()){
-            inputPassword.getBackground().setColorFilter(getResources().getColor(R.color.red), PorterDuff.Mode.SRC_ATOP);
-            inputPassword.setError("Masukkan password");
-            valid = 0;
-        }
-        else{
-            inputPassword.getBackground().setColorFilter(getResources().getColor(R.color.yellow), PorterDuff.Mode.SRC_ATOP);
-        }
-
-        return valid;
-    }
 
 
 
