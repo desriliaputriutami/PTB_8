@@ -13,10 +13,10 @@ import retrofit2.http.POST;
 public interface Route {
 
     @FormUrlEncoded
-    @POST("login")
+    @POST("api/login")
     Call<LoginResponse> login(@Field("email") String email, @Field("password") String password);
 
-    @POST("logout")
+    @POST("api/logout")
     Call<MessageClass> logout(@Header("Authorization") String token);
 
 }

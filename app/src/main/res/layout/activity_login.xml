@@ -92,7 +92,7 @@
         android:layout_marginBottom="16dp"
         android:backgroundTint="@color/main"
         android:fontFamily="@font/poppinssemibold"
-        android:onClick="toHome"
+        android:onClick="cekLogin"
         android:text="Login"
         android:textColor="@color/white"
         android:textSize="20sp"
