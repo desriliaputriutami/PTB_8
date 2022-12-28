@@ -36,6 +36,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 
+
 public class Login extends AppCompatActivity {
 
 
@@ -105,12 +106,13 @@ public class Login extends AppCompatActivity {
                 LoginResponse loginResponse = response.body();
 
 
+
                 if(loginResponse !=null){                                     //kalo loginresponsnya tidak sama dengan null artinya ada kita dapatkan object nya, kemungkinan besar sukses
                     Toast.makeText(Login.this, "sukses login", Toast.LENGTH_SHORT).show();
                     Intent mainIntent = new Intent(Login.this,MainActivity.class);    //kalo sukses, akan di arahkan ke activity berikutnya
                     startActivity(mainIntent);
                 }else{
-                    Toast.makeText(Login.this, "gagal menghubungi server", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Login.this, "gagal menghubungi server / ga sama dengan null", Toast.LENGTH_SHORT).show();
                 }
             }
 
