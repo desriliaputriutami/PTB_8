@@ -104,6 +104,7 @@ public class Login extends AppCompatActivity {
             @Override
             public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
                 LoginResponse loginResponse = response.body();
+                Toast.makeText(Login.this, email, Toast.LENGTH_SHORT).show();
 
 
 

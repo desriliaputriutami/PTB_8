@@ -3,6 +3,22 @@ package com.example.a8;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
+
+import android.content.DialogInterface;
+import okhttp3.OkHttpClient;
+import okhttp3.Response;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
+import androidx.core.app.NotificationCompat;
+
+import com.example.a8.models.MessageClass;
+
+
+
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,6 +30,8 @@ import android.widget.ImageButton;
 import android.widget.PopupMenu;
 import android.widget.Toast;
 
+import com.example.a8.models.MessageClass;
+import com.example.a8.route.Route;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.messaging.FirebaseMessaging;
@@ -21,6 +39,7 @@ import com.google.firebase.messaging.FirebaseMessaging;
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity-Debug";
     public ImageButton imageButton5, imageButton6, imageButton7, imageButton8;;
+    String token;
 
     @SuppressLint("WrongViewCast")
     @Override
@@ -38,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
                         }
 
                         // Get new FCM registration token
-                        String token = task.getResult();
+                        token = task.getResult();
 
                         // Log and toast
                         Log.d(TAG, token);
@@ -47,6 +66,69 @@ public class MainActivity extends AppCompatActivity {
                 });
 
     }
+
+
+
+    //==================<buat log out>===========================
+    public void kembali_landing(View view) {
+
+        new AlertDialog.Builder(this)
+                .setTitle(R.string.app_name)
+                .setMessage("Yakin mau keluar?")
+                .setPositiveButton("Ya", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                        String API_BASE_URL = "http://ptb-api.husnilkamil.my.id/";
+                        Retrofit retrofit = new Retrofit.Builder()
+
+                                .baseUrl(API_BASE_URL)
+                                .addConverterFactory( GsonConverterFactory.create() )
+                                .client( new OkHttpClient.Builder().build() )
+                                .build();
+
+                        Route logout = retrofit.create(Route.class);
+
+                        Call<MessageClass> call = logout.logout(token);
+
+                        call.enqueue(new Callback<MessageClass>() {
+
+
+
+
+                            @Override
+                            public void onResponse(Call<MessageClass> call, retrofit2.Response<MessageClass> response) {
+                                if (response.code() == 200){
+                                    if (response.isSuccessful()){
+
+                                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                                        Toast.makeText(getApplicationContext(), response.body().getMessage(), Toast.LENGTH_SHORT).show();
+                                        finish();
+                                        startActivity(intent);
+                                    }
+                                }
+
+                            }
+
+                            @Override
+                            public void onFailure(Call<MessageClass> call, Throwable t) {
+                                Toast.makeText(getApplicationContext(), t.getMessage(), Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                    }
+                })
+                .setNegativeButton("Tidak", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.cancel();
+                    }
+                })
+                .show();
+//        Intent intent = new Intent(this, MainActivity.class);
+//        startActivity(intent);
+    }
+    //===========================================================
+
 
     public void logoutClick(View view) {
         Intent detailIntent = new Intent (this,Login.class);
