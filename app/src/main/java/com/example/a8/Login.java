@@ -74,7 +74,7 @@ public class Login extends AppCompatActivity {
     }
 
 
-    //========================<<validasi username dan password >>=====================================
+    //========================<<validasi nim dan password >>=====================================
     public void cekLogin(){
         editEmail = findViewById(R.id.editUsername);
         editPassword = findViewById(R.id.editPassword);
