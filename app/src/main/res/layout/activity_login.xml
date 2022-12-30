@@ -41,7 +41,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="75dp"
         android:layout_marginEnd="32dp"
-        android:hint="Username"
+        android:hint="Nim"
         app:boxCornerRadiusBottomEnd="32dp"
         app:boxCornerRadiusBottomStart="32dp"
         app:boxCornerRadiusTopEnd="32dp"
