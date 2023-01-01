@@ -19,7 +19,7 @@ public class PermintaanSidangAdapter extends RecyclerView.Adapter<PermintaanSida
     ArrayList<PermintaanSidang> listPermintaanSidang = new ArrayList<>();
 
 
-    ItemPermintaanSidangClickListener listener;
+    PermintaanSidangAdapter.ItemPermintaanSidangClickListener listener;
 
     public PermintaanSidangAdapter(ArrayList<PermintaanSidang> listPermintaanSidang) {
         this.listPermintaanSidang = listPermintaanSidang;
@@ -29,16 +29,17 @@ public class PermintaanSidangAdapter extends RecyclerView.Adapter<PermintaanSida
         this.listPermintaanSidang = listPermintaanSidang;
     }
 
-    public void setListener(ItemPermintaanSidangClickListener listener) {
+    public void setListener(PermintaanSidangAdapter.ItemPermintaanSidangClickListener listener) {
         this.listener = listener;
+
     }
 
     @NonNull
     @Override
     public MahasiswaViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.item_permintaan_ta, parent, false);
-        return new MahasiswaViewHolder(view);
+                .inflate(R.layout.item_permintaan_sidang, parent, false);
+        return new PermintaanSidangAdapter.MahasiswaViewHolder(view);
     }
 
     @Override

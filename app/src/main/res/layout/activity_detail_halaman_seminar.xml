@@ -45,7 +45,7 @@
         app:layout_constraintTop_toBottomOf="@+id/button6">
 
         <TextView
-            android:id="@+id/tv_detailhalseminar1"
+            android:id="@+id/tv_detailhalsidang1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -56,7 +56,7 @@
             android:textSize="16dp" />
 
         <TextView
-            android:id="@+id/tv_detailhalseminar2"
+            android:id="@+id/tv_detailhalsidang2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -67,7 +67,7 @@
             android:textSize="16dp" />
 
         <TextView
-            android:id="@+id/tv_detailhalseminar3"
+            android:id="@+id/tv_detailhalsidang3"
             android:layout_width="330dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -80,7 +80,7 @@ Chaining Berbasis Web"
             android:textSize="16dp" />
 
         <TextView
-            android:id="@+id/tv_detailhalseminar4"
+            android:id="@+id/tv_detailhalsidang4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -91,7 +91,7 @@ Chaining Berbasis Web"
             android:textSize="16dp" />
 
         <TextView
-            android:id="@+id/tv_detailhalseminar5"
+            android:id="@+id/tv_detailhalsidang5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -102,7 +102,7 @@ Chaining Berbasis Web"
             android:textSize="16dp" />
 
         <TextView
-            android:id="@+id/tv_detailhalseminar6"
+            android:id="@+id/tv_detailhalsidang6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -148,61 +148,6 @@ Chaining Berbasis Web"
         app:layout_constraintBottom_toTopOf="@+id/cardView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_main" />
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="450dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        android:backgroundTint="@color/white">
-
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-
-            <ImageButton
-                android:id="@+id/imageButton5"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:backgroundTint="@color/white"
-                android:src="@drawable/ic_dashboard" />
-
-            <ImageButton
-                android:id="@+id/imageButton6"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:backgroundTint="@color/white"
-                android:src="@drawable/ic_book" />
-
-            <ImageButton
-                android:id="@+id/imageButton7"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:backgroundTint="@color/white"
-                android:src="@drawable/ic_desktop" />
-
-            <ImageButton
-                android:id="@+id/imageButton8"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:backgroundTint="@color/white"
-                android:src="@drawable/ic_mhs" />
-
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
