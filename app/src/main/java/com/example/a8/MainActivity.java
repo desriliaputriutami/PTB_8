@@ -163,8 +163,8 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
             if (id == R.id.item3){
-                Intent i = new Intent(MainActivity.this,ListPermintaanSidang.class);
-                startActivity(i);
+                Intent j = new Intent(MainActivity.this,ListPermintaanSidang.class);
+                startActivity(j);
                 finish();
                 return true;
             }

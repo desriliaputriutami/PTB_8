@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.a8" >
+<uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -76,7 +77,21 @@
                 android:value="" />
         </activity>
         <activity
+            android:name=".detail_Sidang_Activity"
+            android:exported="false" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".ListMahasiswaTA"
+            android:exported="false" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ListMahasiswaSidang"
             android:exported="false" >
             <meta-data
                 android:name="android.app.lib_name"
@@ -94,6 +109,13 @@
         <activity
             android:name=".ListPermintaanTA"
             android:exported="false" />
+        <activity
+            android:name=".ListPermintaanSidang"
+            android:exported="false" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
             android:name=".DetailHalamanSidang"
             android:exported="false" />
