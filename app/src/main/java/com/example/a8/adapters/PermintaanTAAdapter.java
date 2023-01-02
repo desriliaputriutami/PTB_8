@@ -31,6 +31,7 @@ public class PermintaanTAAdapter extends RecyclerView.Adapter<PermintaanTAAdapte
 
     public void setListener(ItemPermintaanTAClickListener listener) {
         this.listener = listener;
+
     }
 
     @NonNull
