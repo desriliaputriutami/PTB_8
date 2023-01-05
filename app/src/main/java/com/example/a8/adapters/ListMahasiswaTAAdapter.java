@@ -10,20 +10,20 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.a8.R;
-import com.example.a8.models.ListMahasiswaTA;
+import com.example.a8.data.Thesis;
 
 import java.util.ArrayList;
 
 public class ListMahasiswaTAAdapter extends RecyclerView.Adapter<ListMahasiswaTAAdapter.MahasiswaTAViewHolder> {
 
-    ArrayList<ListMahasiswaTA> listMahasiswaTA = new ArrayList<>();   //tempat nyimpan data yang akan ditampilkan ke recycleview
+    ArrayList<Thesis> listMahasiswaTA = new ArrayList<>();   //tempat nyimpan data yang akan ditampilkan ke recycleview
     ItemMahasiswaTAClickListener listener;
 
-    public ListMahasiswaTAAdapter(ArrayList<ListMahasiswaTA> listMahasiswaTA) {
+    public ListMahasiswaTAAdapter(ArrayList<Thesis> listMahasiswaTA) {
         this.listMahasiswaTA = listMahasiswaTA;
     }
 
-    public void setListMahasiswaTA(ArrayList<ListMahasiswaTA> listMahasiswaTA) {
+    public void setListMahasiswaTA(ArrayList<Thesis> listMahasiswaTA) {
         this.listMahasiswaTA = listMahasiswaTA;
     }
 
@@ -46,10 +46,10 @@ public class ListMahasiswaTAAdapter extends RecyclerView.Adapter<ListMahasiswaTA
 
     @Override
     public void onBindViewHolder(@NonNull MahasiswaTAViewHolder holder, int position) {     //method yang digunakan untuk menempatkan data ke dalam recycleview nya
-        ListMahasiswaTA mahasiswaTA = listMahasiswaTA.get(position);
+        Thesis mahasiswaTA = listMahasiswaTA.get(position);
         //holder.imageView4.setImageDrawable(R.drawable.profile);
-        holder.nama_mahasiswa_ta.setText(mahasiswaTA.getNama().toString());
-        holder.judul_ta.setText(mahasiswaTA.getJudul().toString());
+        holder.nama_mahasiswa_ta.setText(mahasiswaTA.getStudentName());
+        holder.judul_ta.setText(mahasiswaTA.getTitle());
     }
 
 
@@ -59,7 +59,7 @@ public class ListMahasiswaTAAdapter extends RecyclerView.Adapter<ListMahasiswaTA
         return listMahasiswaTA.size();
     }
     public interface ItemMahasiswaTAClickListener{
-        void onItemMahasiswaTAClick(ListMahasiswaTA mahasiswaTA);
+        void onItemMahasiswaTAClick(Thesis mahasiswaTA);
     }
 
     public class MahasiswaTAViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
@@ -79,7 +79,7 @@ public class ListMahasiswaTAAdapter extends RecyclerView.Adapter<ListMahasiswaTA
 
         @Override
         public void onClick(View view) {
-            ListMahasiswaTA mahasiswaTA = listMahasiswaTA.get(getAdapterPosition());
+            Thesis mahasiswaTA = listMahasiswaTA.get(getAdapterPosition());
             listener.onItemMahasiswaTAClick(mahasiswaTA);
 
         }

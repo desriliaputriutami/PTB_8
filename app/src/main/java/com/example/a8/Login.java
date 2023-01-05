@@ -108,7 +108,8 @@ public class Login extends AppCompatActivity {
 
 
 
-                if(loginResponse !=null){                                     //kalo loginresponsnya tidak sama dengan null artinya ada kita dapatkan object nya, kemungkinan besar sukses
+                if(loginResponse !=null){
+                    //kalo loginresponsnya tidak sama dengan null artinya ada kita dapatkan object nya, kemungkinan besar sukses
                     Toast.makeText(Login.this, "sukses login", Toast.LENGTH_SHORT).show();
                     Intent mainIntent = new Intent(Login.this,MainActivity.class);    //kalo sukses, akan di arahkan ke activity berikutnya
                     startActivity(mainIntent);
