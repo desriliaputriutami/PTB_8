@@ -3,12 +3,9 @@ package com.example.a8;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
-import android.app.Service;
 import android.content.Intent;
 import android.os.Build;
-import android.os.IBinder;
 import android.util.Log;
-import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.core.app.NotificationCompat;
@@ -51,7 +48,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
             channel.setDescription("ini hanya kanal untuk notifikasi");
             NotificationManagerCompat.from(this).createNotificationChannel(channel);
         }
-        Intent i = new Intent(this, ListPermintaanTA.class);
+        Intent i = new Intent(this, PermintaanActivity.class);
         TaskStackBuilder stackBuilder= TaskStackBuilder.create(this);
         stackBuilder.addNextIntentWithParentStack(i);
         PendingIntent resultPendingIntent=

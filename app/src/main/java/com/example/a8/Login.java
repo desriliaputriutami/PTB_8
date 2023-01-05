@@ -9,24 +9,15 @@ import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.graphics.PorterDuff;
 import android.os.Build;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ProgressBar;
 import android.widget.Toast;
-import org.json.JSONException;
-import org.json.JSONObject;
 
 //import com.example.a8.models.loginResponse;
-import com.example.a8.route.Route;
-import com.google.android.material.button.MaterialButton;
-
-import java.io.IOException;
+import com.example.a8.retrofit.TugasClient;
 
 import okhttp3.OkHttpClient;
 import retrofit2.Call;
@@ -94,7 +85,7 @@ public class Login extends AppCompatActivity {
                 .client( new OkHttpClient.Builder().build() )
                 .build();
 
-        Route client = retrofit.create(Route.class);
+        TugasClient client = retrofit.create(TugasClient.class);
 
         //panggil client
         Call<LoginResponse> call = client.login(email, password);

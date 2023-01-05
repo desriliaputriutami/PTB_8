@@ -18,7 +18,6 @@ import com.example.a8.models.ThesesData;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.messaging.FirebaseMessaging;
-import com.example.a8.route.Route;
 
 
 import java.util.ArrayList;

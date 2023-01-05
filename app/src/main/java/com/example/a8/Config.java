@@ -1,6 +1,6 @@
 package com.example.a8;
 
-import com.example.a8.route.Route;
+import com.example.a8.retrofit.TugasClient;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -14,12 +14,12 @@ public class Config {
     public static final Integer SUCCESS_RESULT = 1;
     public static final Integer FAILURE_RESULT = 0;
 
-    public Route configRetrofit(){
+    public TugasClient configRetrofit(){
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(API_BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
-        Route route = retrofit.create(Route.class);
+        TugasClient route = retrofit.create(TugasClient.class);
         return route;
     }
 }

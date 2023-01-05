@@ -7,13 +7,10 @@ import android.app.AlertDialog;
 
 import android.content.DialogInterface;
 import okhttp3.OkHttpClient;
-import okhttp3.Response;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
-
-import androidx.core.app.NotificationCompat;
 
 import com.example.a8.models.MessageClass;
 
@@ -30,8 +27,7 @@ import android.widget.ImageButton;
 import android.widget.PopupMenu;
 import android.widget.Toast;
 
-import com.example.a8.models.MessageClass;
-import com.example.a8.route.Route;
+import com.example.a8.retrofit.TugasClient;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.messaging.FirebaseMessaging;
@@ -87,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
                                 .client( new OkHttpClient.Builder().build() )
                                 .build();
 
-                        Route logout = retrofit.create(Route.class);
+                        TugasClient logout = retrofit.create(TugasClient.class);
 
                         Call<MessageClass> call = logout.logout(token);
 
@@ -157,7 +153,7 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
             if (id == R.id.item2){
-                Intent i = new Intent(MainActivity.this,ListPermintaanTA.class);
+                Intent i = new Intent(MainActivity.this, PermintaanActivity.class);
                 startActivity(i);
                 finish();
                 return true;
@@ -169,7 +165,7 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
             if (id == R.id.item4){
-                Intent i = new Intent(MainActivity.this,ListPermintaanTA.class);
+                Intent i = new Intent(MainActivity.this, PermintaanActivity.class);
                 startActivity(i);
                 finish();
                 return true;
