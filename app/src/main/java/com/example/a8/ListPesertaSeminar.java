@@ -103,14 +103,14 @@ public class ListPesertaSeminar extends AppCompatActivity implements PesertaSemi
 
     @Override
     public void onItemDataClick(PesertaSeminar pesertaSeminar) {
-        Intent detailIntent = new Intent(this, detail_TA_Activity.class); //buat pindah ke halaman berikutnya :)
+        Intent detailIntent = new Intent(this, detail_Sidang_Activity.class); //buat pindah ke halaman berikutnya :)
         detailIntent.putExtra("nama_mahasiswa", pesertaSeminar.getNama().toString());   //buat nge load data nama nya ke halaman detail mahasiswa TA
         detailIntent.putExtra("isi_judul_tugas_akhir", pesertaSeminar.getJudul().toString());  //buat nge load data judul nya ke halaman detail mahasiswa TA
         startActivity(detailIntent);
     }
 
     public void onbutton_back_list_peserta_seminarClick(View view) {
-        Intent i = new Intent(this, detail_TA_Activity.class);
+        Intent i = new Intent(this, detail_Sidang_Activity.class);
         startActivity(i);
     }
 

@@ -108,7 +108,8 @@ public class Login extends AppCompatActivity {
 
 
 
-                if(loginResponse !=null){                                     //kalo loginresponsnya tidak sama dengan null artinya ada kita dapatkan object nya, kemungkinan besar sukses
+                if(loginResponse !=null){
+                    //kalo loginresponsnya tidak sama dengan null artinya ada kita dapatkan object nya, kemungkinan besar sukses
                     Toast.makeText(Login.this, "sukses login", Toast.LENGTH_SHORT).show();
                     Intent mainIntent = new Intent(Login.this,MainActivity.class);    //kalo sukses, akan di arahkan ke activity berikutnya
                     startActivity(mainIntent);
@@ -148,34 +149,34 @@ public class Login extends AppCompatActivity {
 
         //3. buat onclick listener
         btn_login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(Login.this, MainActivity.class);
-                TaskStackBuilder stackBuilder= TaskStackBuilder.create(Login.this);
-                stackBuilder.addNextIntentWithParentStack(i);
-                PendingIntent resultPendingIntent=
-                        stackBuilder.getPendingIntent(0,
-                                PendingIntent.FLAG_UPDATE_CURRENT| PendingIntent.FLAG_IMMUTABLE);
+                                         @Override
+                                         public void onClick(View view) {
+                                             Intent i = new Intent(Login.this, MainActivity.class);
+                                             TaskStackBuilder stackBuilder= TaskStackBuilder.create(Login.this);
+                                             stackBuilder.addNextIntentWithParentStack(i);
+                                             PendingIntent resultPendingIntent=
+                                                     stackBuilder.getPendingIntent(0,
+                                                             PendingIntent.FLAG_UPDATE_CURRENT| PendingIntent.FLAG_IMMUTABLE);
 
-                //5. buat builder varnya
-                NotificationCompat.Builder builder  = new NotificationCompat.Builder(Login.this, CHANNEL_ID)
-                        .setSmallIcon(R.drawable.ic_account)
-                        .setContentTitle("Yeay login berhasil")
-                        .setContentText("Selamat")
-                        .addAction(R.drawable.ic_account,"login", resultPendingIntent)
-                        .setPriority(NotificationCompat.PRIORITY_DEFAULT);
-                //Toast.makeText(Login.this, "Anda Berhasil Login", Toast.LENGTH_SHORT).show();
+                                             //5. buat builder varnya
+                                             NotificationCompat.Builder builder  = new NotificationCompat.Builder(Login.this, CHANNEL_ID)
+                                                     .setSmallIcon(R.drawable.ic_account)
+                                                     .setContentTitle("Yeay login berhasil")
+                                                     .setContentText("Selamat")
+                                                     .addAction(R.drawable.ic_account,"login", resultPendingIntent)
+                                                     .setPriority(NotificationCompat.PRIORITY_DEFAULT);
+                                             //Toast.makeText(Login.this, "Anda Berhasil Login", Toast.LENGTH_SHORT).show();
 
-                //6. Buat objek notifikasi
-                //Notification notification= builder.build();
+                                             //6. Buat objek notifikasi
+                                             //Notification notification= builder.build();
 
-                //7. Tampilkan notifikasi
-                notificationManager.notify(102, builder.build());
+                                             //7. Tampilkan notifikasi
+                                             notificationManager.notify(102, builder.build());
 
-                Intent a = new Intent(Login.this, MainActivity.class);
-                startActivity(a);
-            }
-        }
+                                             Intent a = new Intent(Login.this, MainActivity.class);
+                                             startActivity(a);
+                                         }
+                                     }
         );
     }
 

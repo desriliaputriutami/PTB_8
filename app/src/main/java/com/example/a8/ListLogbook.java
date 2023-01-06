@@ -97,9 +97,4 @@ public class ListLogbook extends AppCompatActivity{
 
     }
 
-
-    public void onbutton_back_list_logbookClick(View view) {
-        Intent i = new Intent(this, detail_TA_Activity.class);
-        startActivity(i);
-    }
 }

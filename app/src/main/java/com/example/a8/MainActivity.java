@@ -175,7 +175,7 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         if (id == R.id.item5){
-            Intent i = new Intent(MainActivity.this, ListMahasiswaTA.class);
+            Intent i = new Intent(MainActivity.this, ListMahasiswaSidang.class);
             startActivity(i);
             finish();
             return true;
